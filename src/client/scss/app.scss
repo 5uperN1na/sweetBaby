@@ -1,0 +1,15 @@
+$theme-colors: (
+    'primary': #0091ea //Covalence Blue!  :D
+);
+
+
+.App {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
