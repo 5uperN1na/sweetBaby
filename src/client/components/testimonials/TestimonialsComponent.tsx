@@ -34,11 +34,11 @@ const TestimonialsComp: React.FC<ITestimonialsCompProps> = (props) => {
                             <div className="col-md-1 text-center quote-style"><FaQuoteLeft /></div>
                             <div className="col-md-8">
                                 <p className="text-justify mt-3 font-weight-light">{props.testimonial.description}</p>
+                                <div className="text-right name-text">- {props.testimonial.name}</div>
                             </div>
                             <div className="col-md-1 text-center quote-style"><FaQuoteRight /></div>
                         </div>
 
-                        <div className="text-right name-text">- {props.testimonial.name}</div>
                     </div>
                 </div>
                 <hr className="hr-style mb-5" />
