@@ -1,22 +1,48 @@
 import * as React from 'react';
-import NavBar from '../navigation/NavComponent';
+import styled from "styled-components";
+import { ITestimonial } from '../../utils/interfaces';
 
-const Testimonials: React.FC<ITestimonialsProps> = (props) => {
+
+const TestimonialsComp: React.FC<ITestimonialsCompProps> = (props) => {
 
     return (
-        
-            <main className="container">
-                <NavBar />
-                <div className="row">
-                    <div className="col-md-8 mt-3">
-                        <div className="display-2">Testimonials</div>
-                    </div>
+        <Layout>
+            <div className="row border" style={{ width: "25rem", height: "10rem" }}>
+                <div className="col-md-4 bg-primary">
+
                 </div>
-            </main>
-       
+                <div className="col-md-8 ">
+
+                </div>
+            </div>
+            
+        </Layout>
     )
 }
 
-export interface ITestimonialsProps { }
+const Layout = styled.div`
+.card-background {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
 
-export default Testimonials;
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+
+
+`
+
+export interface ITestimonialsCompProps {
+    testimonial: ITestimonial;
+}
+
+export default TestimonialsComp;
