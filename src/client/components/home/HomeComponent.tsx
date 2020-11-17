@@ -51,8 +51,9 @@ const Home: React.FC<IHomeProps> = (props) => {
                 </Carousel>
             </div>
 
+            <hr className="mb-5" />
 
-            {/* Testimonail carousel            */}
+
             <div className="containermy-3">
                     <TestimonialCarousel />
             </div>

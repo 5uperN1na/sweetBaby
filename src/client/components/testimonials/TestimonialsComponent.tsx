@@ -1,43 +1,69 @@
 import * as React from 'react';
 import styled from "styled-components";
 import { ITestimonial } from '../../utils/interfaces';
+import GoogleFontLoader from 'react-google-font-loader';
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
+
+
+const Fade = require('react-reveal/Fade')
 
 
 const TestimonialsComp: React.FC<ITestimonialsCompProps> = (props) => {
 
     return (
         <Layout>
-            <div className="row border" style={{ width: "25rem", height: "10rem" }}>
-                <div className="col-md-4 bg-primary">
+            <GoogleFontLoader
+                fonts={[
+                    {
+                        font: 'Homemade Apple',
+                        weights: [400, '400i'],
+                    },
+                    {
+                        font: 'Beth Ellen',
+                        weights: [400, '400i'],
+                    },
+                ]}
+                subsets={['cyrillic-ext', 'greek']}
+            />
+            <Fade bottom>
+                <hr className="hr-style mt-5" />
+                <div className=" bg-white">
+                    <div className="container">
+                        {/* <div className="text-center mb-3">"{props.testimonial.quote}"</div> */}
+                        <div className="row d-flex justify-content-center align-items-center">
+                            <div className="col-md-1 text-center quote-style"><FaQuoteLeft /></div>
+                            <div className="col-md-8">
+                                <p className="text-justify mt-3 font-weight-light">{props.testimonial.description}</p>
+                            </div>
+                            <div className="col-md-1 text-center quote-style"><FaQuoteRight /></div>
+                        </div>
 
+                        <div className="text-right name-text">- {props.testimonial.name}</div>
+                    </div>
                 </div>
-                <div className="col-md-8 ">
-
-                </div>
-            </div>
-            
+                <hr className="hr-style mb-5" />
+            </Fade>
         </Layout>
     )
 }
 
 const Layout = styled.div`
-.card-background {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+
+.name-text {
+    font-family: 'Homemade Apple', sans-serif;
+
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+.quote-style {
+    font-size: 30px;
+    color: #dcd6d6;
+}
 
+.hr-style {
+    margin: 30px -20px 20px;
+    border: 0;
+    border-top: 1px solid #c9c7c7;
+}
 
 `
 

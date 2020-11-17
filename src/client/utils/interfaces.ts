@@ -1,6 +1,6 @@
 export interface ITestimonial {
     id?: number,
     name?: string,
-    quite?: string,
+    quote?: string,
     description?: string,
 }

@@ -2,7 +2,6 @@ import * as React from 'react';
 import GoogleFontLoader from 'react-google-font-loader';
 import styled from 'styled-components';
 
-const Reveal = require('react-reveal/Reveal')
 
 
 const TestimonialsArray = [
@@ -67,7 +66,7 @@ const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = (props) => {
                 subsets={['cyrillic-ext', 'greek']}
             />
             <div className="row justify-content-center no-gutters testimonial-text">
-                <h1>
+                <h1 className="mb-5">
                     Testimonials
                 </h1>
             </div>
@@ -76,7 +75,7 @@ const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = (props) => {
                     <a href="/testimonials" className="link">
                         <div className="card-body">
                             <div className="quote-text">
-                                <div className="mb-2 py-3 font-weight-light quote-text text-justify text-center">{item.quote}</div>
+                                <div className="mb-2 py-3 font-weight-light quote-text text-justify text-center">" {item.quote} "</div>
                             </div>
                             <div className="text-right">
                                 <span

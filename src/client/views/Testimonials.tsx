@@ -2,6 +2,8 @@ import * as React from 'react';
 import styled from 'styled-components';
 import NavBar from '../components/navigation/NavComponent';
 import TestimonialsComp from '../components/testimonials/TestimonialsComponent';
+import GoogleFontLoader from 'react-google-font-loader';
+
 
 const TestimonialsArray = [
     {
@@ -39,42 +41,42 @@ const TestimonialsArray = [
 const Testimonials: React.FC<ITestimonialsProps> = (props) => {
 
     return (
-
-        <main className="container">
-            <NavBar />
-            <div className="row">
-                <div className="col-md-8 mt-3">
-                    <div className="display-2">Testimonials</div>
+        <Layout>
+            <main className="container">
+                <GoogleFontLoader
+                    fonts={[
+                        {
+                            font: 'Homemade Apple',
+                            weights: [400, '400i'],
+                        },
+                        {
+                            font: 'Beth Ellen',
+                            weights: [400, '400i'],
+                        },
+                    ]}
+                    subsets={['cyrillic-ext', 'greek']}
+                />
+                <NavBar />
+                <div className="d-flex justify-content-center align-items-center">
+                    <div className="testimonial-text mb-3 mt-5 text-muted">Testimonials</div>
                 </div>
-            </div>
-            <div className="row">
-                {TestimonialsArray.map((testimonial, index) => (
-                    <TestimonialsComp key={index} testimonial={testimonial} />
-                ))}
-            </div>
-        </main>
+                <div className="row justify-content-center">
+                    {TestimonialsArray.map((testimonial, index) => (
+                        <TestimonialsComp key={index} testimonial={testimonial} />
+                    ))}
+                </div>
+            </main>
+        </Layout>
 
     )
 }
 
 const Layout = styled.div`
 
-.card-background {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+.testimonial-text {
+    font-family: 'Beth Ellen', sans-serif;
+    font-size: 40px;
 }
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
 
 `
 
