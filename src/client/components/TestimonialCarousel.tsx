@@ -1,5 +1,8 @@
 import * as React from 'react';
+import GoogleFontLoader from 'react-google-font-loader';
 import styled from 'styled-components';
+
+const Reveal = require('react-reveal/Reveal')
 
 
 const TestimonialsArray = [
@@ -35,33 +38,50 @@ const TestimonialsArray = [
     },
 ];
 
-
-var randomItem = TestimonialsArray[Math.floor(Math.random() * TestimonialsArray.length)];
-
-console.log(randomItem.quote, randomItem.name)
-
 const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = (props) => {
 
-    const [item, setItem] = React.useState()
+    const [item, setItem] = React.useState<any>({ quote: "After using Sweet Baby Babysitter my business skyrocketed! Your company is truly upstanding and is behind its product 100%.", name: "Muffin W." })
 
-    
+    React.useEffect(() => {
+        const interval = setInterval(() => {
+            var randomItem = TestimonialsArray[Math.floor(Math.random() * TestimonialsArray.length)];
+            setItem(randomItem)
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
 
 
     return (
-
         <Layout>
-            <div className="row justify-content-center no-gutters">
+            <GoogleFontLoader
+                fonts={[
+                    {
+                        font: 'Homemade Apple', 
+                        weights: [400, '400i'],
+                    },
+                    {
+                        font: 'Beth Ellen', 
+                        weights: [400, '400i'],
+                    },
+                ]}
+                subsets={['cyrillic-ext', 'greek']}
+            />
+            <div className="row justify-content-center no-gutters testimonial-text">
                 <h1>
                     Testimonials
                 </h1>
             </div>
-            <div className="row d-flex justify-content-center align-items-center border mb-5" style={{ height: "200px" }}>
-                <div className="card card-background mx-5" style={{width:"100%"}}>
-                    <div className="card-body">
-                        <h4 className="card-subtitle mb-2 text-secondary p-3 font-weight-light">{randomItem.quote}
-                        </h4>
-                        <p className="card-text text-secondary px-5 text-right">- {randomItem.name}</p>
-                    </div>
+            <div className="row d-flex justify-content-center align-items-center border mb-5 card-background " style={{ height: "250px" }}>
+                <div className="mx-5" style={{ width: "100%" }}>
+                    <a href="/testimonials" className="link">
+                        <div className="card-body">
+                            <div className="quote-text">
+                                <div className="mb-2 p-3 font-weight-light quote-text">{item.quote}</div>
+                            </div><span className="quote-text" style={{ fontFamily: "'Homemade Apple', sans-serif"
+}}>- {item.name}</span>
+                            {/* <p className="card-text px-5 text-right quote-text">- {item.name}</p> */}
+                        </div>
+                    </a>
                 </div>
             </div>
         </ Layout>
@@ -70,10 +90,29 @@ const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = (props) => {
 
 const Layout = styled.div`
 
-.quote-text {
-    text-decoration: none;
-    color: black;
+.link {
+    text-decoration: none !important;
 }
+
+.testimonial-text {
+    font-family: 'Beth Ellen', sans-serif;
+}
+
+.quote-text {
+    font-size: 20px;
+    position: relative;
+    animation: mymove 5s infinite;
+    color: gray;
+}
+
+@keyframes mymove {
+    0% { opacity:0; transform: translateY(0vw); }  
+    20% { opacity:1; transform: translateY(0vw); }   
+    80% { opacity:1; transform: translateY(0vw); }  
+   100% { opacity:0; transform: translateY(10vw); } 
+  }
+
+
 
 .card-background {
     background: linear-gradient(-45deg, #b8d8f5, #f5dab8, #eebcbc, #baefa3);
@@ -91,9 +130,6 @@ const Layout = styled.div`
 	100% {
 		background-position: 0% 50%;
 	}
-
-
-
 `
 
 export interface ITestimonialCarouselProps { }
