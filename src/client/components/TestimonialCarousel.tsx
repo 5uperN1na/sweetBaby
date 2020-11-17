@@ -56,11 +56,11 @@ const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = (props) => {
             <GoogleFontLoader
                 fonts={[
                     {
-                        font: 'Homemade Apple', 
+                        font: 'Homemade Apple',
                         weights: [400, '400i'],
                     },
                     {
-                        font: 'Beth Ellen', 
+                        font: 'Beth Ellen',
                         weights: [400, '400i'],
                     },
                 ]}
@@ -76,9 +76,14 @@ const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = (props) => {
                     <a href="/testimonials" className="link">
                         <div className="card-body">
                             <div className="quote-text">
-                                <div className="mb-2 p-3 font-weight-light quote-text">{item.quote}</div>
-                            </div><span className="quote-text" style={{ fontFamily: "'Homemade Apple', sans-serif"
-}}>- {item.name}</span>
+                                <div className="mb-2 py-3 font-weight-light quote-text text-justify text-center">{item.quote}</div>
+                            </div>
+                            <div className="text-right">
+                                <span
+                                    className="quote-text px-5"
+                                    style={{ fontFamily: "'Homemade Apple', sans-serif" }}>- {item.name}
+                                </span>
+                            </div>
                             {/* <p className="card-text px-5 text-right quote-text">- {item.name}</p> */}
                         </div>
                     </a>
