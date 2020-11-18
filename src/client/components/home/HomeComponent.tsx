@@ -4,13 +4,6 @@ import Carousel from "react-elastic-carousel";
 import NavBar from '../navigation/NavComponent';
 import TestimonialCarousel from '../testimonials/TestimonialCarousel';
 
-// var hue = Math.floor(Math.random() * 360);
-// var pastel = 'hsl(' + hue + ', 100%, 87.5%)';
-// $('div').css('background-color', pastel);
-
-
-
-
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -20,10 +13,6 @@ const breakPoints = [
 ];
 
 const Home: React.FC<IHomeProps> = (props) => {
-    var hue = Math.floor(Math.random() * 360);
-    var pastel = 'hsl(' + hue + ', 100%, 87.5%)';
-
-    const [background, setBackground] = React.useState<string>(`${pastel}`)
 
     return (
 
