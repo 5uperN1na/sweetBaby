@@ -1,6 +1,7 @@
 import * as React from 'react';
 import GoogleFontLoader from 'react-google-font-loader';
 import styled from 'styled-components';
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
 
 
 
@@ -73,9 +74,13 @@ const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = (props) => {
             <div className="row d-flex justify-content-center align-items-center border mb-5 card-background " style={{ height: "250px" }}>
                 <div className="mx-5" style={{ width: "100%" }}>
                     <a href="/testimonials" className="link">
-                        <div className="card-body">
+                    <div className="card-body">
                             <div className="quote-text">
-                                <div className="mb-2 py-3 font-weight-light quote-text text-justify text-center">" {item.quote} "</div>
+                                <div className="mb-2 py-3 font-weight-light quote-text text-justify text-center font-italic">
+                                    <div>
+                                        <span className="quote-marks mr-2"> <FaQuoteLeft /></span> {item.quote} <span className="quote-marks ml-2"> <FaQuoteRight /></span> 
+                                    </div>
+                                </div>
                             </div>
                             <div className="text-right">
                                 <span
@@ -83,7 +88,6 @@ const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = (props) => {
                                     style={{ fontFamily: "'Homemade Apple', sans-serif" }}>- {item.name}
                                 </span>
                             </div>
-                            {/* <p className="card-text px-5 text-right quote-text">- {item.name}</p> */}
                         </div>
                     </a>
                 </div>
@@ -107,6 +111,11 @@ const Layout = styled.div`
     position: relative;
     animation: mymove 5s infinite;
     color: gray;
+}
+
+.quote-marks {
+    font-size: 2rem;
+    opacity: 0.2;
 }
 
 @keyframes mymove {
