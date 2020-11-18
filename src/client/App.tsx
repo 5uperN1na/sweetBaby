@@ -5,6 +5,7 @@ import Covid from './components/covid/CovidComponent';
 import About from './components/about/AboutComponent';
 import Testimonials from './views/Testimonials';
 import Contact from './components/contact/ContactComponent';
+import Pastel from './views/Pastel';
 
 const App = () => {
 	return (
@@ -31,6 +32,9 @@ const App = () => {
 					<Contact />
 				</Route>
 
+				<Route exact path="/pastel">
+					<Pastel />
+				</Route>
 
 			</Switch>
 		</BrowserRouter>
