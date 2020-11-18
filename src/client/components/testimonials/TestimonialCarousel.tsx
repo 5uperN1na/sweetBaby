@@ -122,10 +122,8 @@ const Layout = styled.div`
     0% { opacity:0; transform: translateY(0vw); }  
     20% { opacity:1; transform: translateY(0vw); }   
     80% { opacity:1; transform: translateY(0vw); }  
-   100% { opacity:0; transform: translateY(10vw); } 
+   100% { opacity:0; transform: translateY(0vw); } 
   }
-
-
 
 .card-background {
     background: linear-gradient(-45deg, #b8d8f5, #f5dab8, #eebcbc, #baefa3);

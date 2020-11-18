@@ -1,64 +1,61 @@
 import * as React from 'react';
 import styled from "styled-components";
-import Carousel from "react-elastic-carousel";
 import NavBar from '../navigation/NavComponent';
 import TestimonialCarousel from '../testimonials/TestimonialCarousel';
 
-// var hue = Math.floor(Math.random() * 360);
-// var pastel = 'hsl(' + hue + ', 100%, 87.5%)';
-// $('div').css('background-color', pastel);
-
-
-
-
-
-const breakPoints = [
-    { width: 1, itemsToShow: 1 },
-    { width: 550, itemsToShow: 2 },
-    { width: 768, itemsToShow: 3 },
-    { width: 1200, itemsToShow: 4 },
-];
-
 const Home: React.FC<IHomeProps> = (props) => {
-    var hue = Math.floor(Math.random() * 360);
-    var pastel = 'hsl(' + hue + ', 100%, 87.5%)';
-
-    const [background, setBackground] = React.useState<string>(`${pastel}`)
 
     return (
 
         <>
             <NavBar />
-
-            <div className="App">
-
-
-                <Carousel breakPoints={breakPoints}>
-                    <Item>
-                        <img className='test' alt='test' src='/images/girl.jpg' width="100%" />
-                    </Item>
-                    <Item>
-                        <img className='test' alt='test' src='/images/baby.jpg' width="100%" />
-                    </Item>
-                    <Item>
-                        <img className='test' alt='test' src='/images/kidsPlay.jpg' width="125%" />
-                    </Item>
-                    <Item>
-                        <img className='test' alt='test' src='/images/vivi4.jpg' width="100%" />
-                    </Item>
-                    <Item>
-                        <img className='test' alt='test' src='/images/schedule1.jpg' width="150%" />
-                    </Item>
-                    <Item>
-                        <img className='test' alt='test' src='/images/schedule2.jpg' width="150%" />
-                    </Item>
-                    <Item>
-                        <img className='test' alt='test' src='/images/basketball.jpg' width="100%" />
-                    </Item>
-                    <Item>
-                        <img className='test' alt='test' src='/images/board.jpg' width="100%" />
-                    </Item>
-                </Carousel>
+            <div className="row my-5">
+                <div className="col-md-12">
+                    <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
+                        <ol className="carousel-indicators">
+                            <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
+                            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                        </ol>
+                        <div className="carousel-inner">
+                            <div className="carousel-item active" style={{ height: "400px" }}>
+                                <div className="row">
+                                    <div className="col-md-6 text-center mx-auto d-block">
+                                        <div className="text-center">
+                                            <img className='test' alt='test' src='/images/baby.jpg' width="100%" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="carousel-item" style={{ height: "400px" }}>
+                                <div className="row">
+                                    <div className="col-md-6 text-center mx-auto d-block">
+                                        <div className="text-center">
+                                            <img className='test' alt='test' src='/images/vivi4.jpg' width="100%" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="carousel-item" style={{ height: "400px" }}>
+                                <div className="row">
+                                    <div className="col-md-6 text-center mx-auto d-block">
+                                        <div className="text-center">
+                                            <img className='test' alt='test' src='/images/basketball.jpg' width="100%" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev" style={{ filter: "invert(100%)" }}>
+                        <span className="carousel-control-prev-icon" aria-hidden="true" ></span>
+                        <span className="sr-only">Previous</span>
+                    </a>
+                    <a className="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next" style={{ filter: "invert(100%)" }}>
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="sr-only">Next</span>
+                    </a>
+                </div>
             </div>
 
             <hr className="mb-5" />

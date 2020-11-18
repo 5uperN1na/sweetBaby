@@ -42,6 +42,7 @@ const Testimonials: React.FC<ITestimonialsProps> = (props) => {
 
     return (
         <Layout>
+            <NavBar />
             <main className="container">
                 <GoogleFontLoader
                     fonts={[
@@ -56,7 +57,6 @@ const Testimonials: React.FC<ITestimonialsProps> = (props) => {
                     ]}
                     subsets={['cyrillic-ext', 'greek']}
                 />
-                <NavBar />
                 <div className="d-flex justify-content-center align-items-center">
                     <div className="testimonial-text mb-3 mt-5 text-muted">Testimonials</div>
                 </div>
