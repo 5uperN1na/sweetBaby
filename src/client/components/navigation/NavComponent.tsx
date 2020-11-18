@@ -9,7 +9,8 @@ const NavBar: React.FC<NavBarProps> = (props) => {
             <NavLink className="mx-2 btn-btn-link" exact to='/about'> About</NavLink>
             <NavLink className="mx-2 btn-btn-link" exact to='/testimonials'> Testimonials</NavLink>
             <NavLink className="mx-2 btn-btn-link" exact to='/contact'> Contact</NavLink>
-            
+            <NavLink className="mx-2 btn-btn-link" exact to='/pastel'> Pastel Generator</NavLink>
+
             </section>
          
         </main>

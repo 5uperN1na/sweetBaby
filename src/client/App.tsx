@@ -3,8 +3,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/home/HomeComponent';
 import Covid from './components/covid/CovidComponent';
 import About from './components/about/AboutComponent';
-import Testimonials from './components/testimonials/TestimonialsComponent';
+import Testimonials from './views/Testimonials';
 import Contact from './components/contact/ContactComponent';
+import Pastel from './views/Pastel';
 
 const App = () => {
 	return (
@@ -31,6 +32,9 @@ const App = () => {
 					<Contact />
 				</Route>
 
+				<Route exact path="/pastel">
+					<Pastel />
+				</Route>
 
 			</Switch>
 		</BrowserRouter>

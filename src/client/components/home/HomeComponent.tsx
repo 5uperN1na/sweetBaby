@@ -1,8 +1,14 @@
 import * as React from 'react';
-import ReactDOM from "react-dom";
 import styled from "styled-components";
 import Carousel from "react-elastic-carousel";
 import NavBar from '../navigation/NavComponent';
+import TestimonialCarousel from '../testimonials/TestimonialCarousel';
+
+// var hue = Math.floor(Math.random() * 360);
+// var pastel = 'hsl(' + hue + ', 100%, 87.5%)';
+// $('div').css('background-color', pastel);
+
+
 
 
 
@@ -14,6 +20,10 @@ const breakPoints = [
 ];
 
 const Home: React.FC<IHomeProps> = (props) => {
+    var hue = Math.floor(Math.random() * 360);
+    var pastel = 'hsl(' + hue + ', 100%, 87.5%)';
+
+    const [background, setBackground] = React.useState<string>(`${pastel}`)
 
     return (
 
@@ -21,40 +31,45 @@ const Home: React.FC<IHomeProps> = (props) => {
             <NavBar />
 
             <div className="App">
-            
+
 
                 <Carousel breakPoints={breakPoints}>
                     <Item>
-                    <img className='test' alt='test' src='/images/girl.jpg' width="100%"/> 
+                        <img className='test' alt='test' src='/images/girl.jpg' width="100%" />
                     </Item>
                     <Item>
-                    <img className='test' alt='test' src='/images/baby.jpg' width="100%"/> 
+                        <img className='test' alt='test' src='/images/baby.jpg' width="100%" />
                     </Item>
                     <Item>
-                    <img className='test' alt='test' src='/images/kidsPlay.jpg' width="125%"/> 
+                        <img className='test' alt='test' src='/images/kidsPlay.jpg' width="125%" />
                     </Item>
                     <Item>
-                    <img className='test' alt='test' src='/images/vivi4.jpg' width="100%"/> 
+                        <img className='test' alt='test' src='/images/vivi4.jpg' width="100%" />
                     </Item>
                     <Item>
-                    <img className='test' alt='test' src='/images/schedule1.jpg' width="150%"/> 
+                        <img className='test' alt='test' src='/images/schedule1.jpg' width="150%" />
                     </Item>
                     <Item>
-                    <img className='test' alt='test' src='/images/schedule2.jpg' width="150%"/> 
+                        <img className='test' alt='test' src='/images/schedule2.jpg' width="150%" />
                     </Item>
                     <Item>
-                    <img className='test' alt='test' src='/images/basketball.jpg' width="100%"/> 
+                        <img className='test' alt='test' src='/images/basketball.jpg' width="100%" />
                     </Item>
                     <Item>
-                    <img className='test' alt='test' src='/images/board.jpg' width="100%"/> 
+                        <img className='test' alt='test' src='/images/board.jpg' width="100%" />
                     </Item>
                 </Carousel>
             </div>
+
+            <hr className="mb-5" />
+
+            <TestimonialCarousel />
+
         </>
     );
 }
 
- 
+
 const Item = styled.div`
   display: flex;
   justify-content: center;
