@@ -19,15 +19,13 @@ const Pastel: React.FC<IPastelProps> = (props) => {
     return (
         <>
             <NavBar />
-
             <div className="row d-flex justify-content-center align-items-center mt-5">
                 <div style={{ height: "200px", width: "200px", backgroundColor: `${background}` }} > </div>
             </div>
             <div className="row d-flex justify-content-center align-items-center mt-5">
-                <div 
-                onClick ={handleClick}
-                className="btn btn-primary">Generate</div>
-
+                <div
+                    onClick={handleClick}
+                    className="btn btn-primary">Generate</div>
             </div>
 
         </>
