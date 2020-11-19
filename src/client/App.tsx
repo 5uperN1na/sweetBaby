@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from './components/home/HomeComponent';
+import Home from './views/Home';
 import Covid from './components/covid/CovidComponent';
-import About from './components/about/AboutComponent';
+import About from './views/About';
 import Testimonials from './views/Testimonials';
-import Contact from './components/contact/ContactComponent';
+import Contact from './views/Contact';
 import Pastel from './views/Pastel';
 
 const App = () => {

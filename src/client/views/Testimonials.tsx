@@ -41,33 +41,34 @@ const TestimonialsArray = [
 const Testimonials: React.FC<ITestimonialsProps> = (props) => {
 
     return (
-        <Layout>
-            <NavBar />
-            <main className="container">
-                <GoogleFontLoader
-                    fonts={[
-                        {
-                            font: 'Homemade Apple',
-                            weights: [400, '400i'],
-                        },
-                        {
-                            font: 'Beth Ellen',
-                            weights: [400, '400i'],
-                        },
-                    ]}
-                    subsets={['cyrillic-ext', 'greek']}
-                />
-                <div className="d-flex justify-content-center align-items-center">
-                    <div className="testimonial-text mb-3 mt-5 text-muted">Testimonials</div>
-                </div>
-                <div className="row justify-content-center">
-                    {TestimonialsArray.map((testimonial, index) => (
-                        <TestimonialsComp key={index} testimonial={testimonial} />
-                    ))}
-                </div>
-            </main>
-        </Layout>
-
+        <Background>
+            <Layout>
+                <NavBar />
+                <main className="container">
+                    <GoogleFontLoader
+                        fonts={[
+                            {
+                                font: 'Homemade Apple',
+                                weights: [400, '400i'],
+                            },
+                            {
+                                font: 'Beth Ellen',
+                                weights: [400, '400i'],
+                            },
+                        ]}
+                        subsets={['cyrillic-ext', 'greek']}
+                    />
+                    <div className="d-flex justify-content-center align-items-center">
+                        <div className="testimonial-text mb-3 mt-5 text-muted">Testimonials</div>
+                    </div>
+                    <div className="row justify-content-center">
+                        {TestimonialsArray.map((testimonial, index) => (
+                            <TestimonialsComp key={index} testimonial={testimonial} />
+                        ))}
+                    </div>
+                </main>
+            </Layout>
+        </Background>
     )
 }
 
@@ -77,6 +78,17 @@ const Layout = styled.div`
     font-family: 'Beth Ellen', sans-serif;
     font-size: 40px;
 }
+
+`
+
+const Background = styled.div`
+background-color: #f4e6cc;
+height: 55%;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+width: 100%;
 
 `
 

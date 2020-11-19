@@ -1,10 +1,18 @@
 import * as React from 'react';
+import { FaHeart } from 'react-icons/fa';
 import styled from 'styled-components';
 
 const NavBar: React.FC<NavBarProps> = (props) => {
     return (
         <Layout>
-            <nav className="bg-white navbar navbar-expand-lg navbar-light pt-3 border border-top-0 border-left-0 border-right-0 shadow-sm">
+            <div className="row justify-content-center">
+                <a href="http://paweljaskolski.com/" target="_blank">
+                    <small className="text-muted made-by">
+                        Made with <span className=" heart-text"><FaHeart /></span> by CodeBasix
+                    </small>
+                </a>
+            </div>
+            <nav className="bg-white navbar navbar-expand-lg navbar-light pt-3 border border-top-0 border-left-0 border-right-0 shadow-sm pr-5">
                 <a className="navbar-brand" href="/">
                     <img
                         className="ml-5"
@@ -30,9 +38,6 @@ const NavBar: React.FC<NavBarProps> = (props) => {
                         <li className="nav-item">
                             <a className="nav-link text-custom-nav" href="/contact">Contact</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link text-custom-nav" href="/pastel">Pastel</a>
-                        </li>
                     </ul>
                 </div>
             </nav>
@@ -46,6 +51,19 @@ const Layout = styled.div`
     font-size: 1.2rem;
     text-decoration: none !important;
 }
+
+.heart-text {
+    color: red;
+    animation-name: heart;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes heart {
+    0%   {color: red;}
+    50%  {color: pink; }
+    100% {color: red;}
+  }
 
 `
 

@@ -1,16 +1,16 @@
 import * as React from 'react';
 import styled from "styled-components";
-import NavBar from '../navigation/NavComponent';
-import TestimonialCarousel from '../testimonials/TestimonialCarousel';
+import NavBar from '../components/navigation/NavComponent';
+import TestimonialCarousel from '../components/testimonials/TestimonialCarousel';
 
 const Home: React.FC<IHomeProps> = (props) => {
 
     return (
 
-        <>
+        <Background>
             <NavBar />
-            <div className="row my-5">
-                <div className="col-md-12">
+            <div className="row my-5 justify-content-center">
+                <div className="col-md-10 py-3">
                     <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
                         <ol className="carousel-indicators">
                             <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
@@ -62,24 +62,20 @@ const Home: React.FC<IHomeProps> = (props) => {
 
             <TestimonialCarousel />
 
-        </>
+        </Background>
     );
 }
 
+const Background = styled.div`
+background-color: #eaabb0;
+height: 50%;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+width: 100%;
 
-const Item = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 500px
-  width: 300px;
-  background-color: #00008B;
-  color: #fff;
-  margin: 0 15px;
-  font-size: 4em;
-`;
-
-
+`
 
 export interface IHomeProps { }
 

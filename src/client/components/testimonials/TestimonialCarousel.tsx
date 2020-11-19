@@ -66,11 +66,6 @@ const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = (props) => {
                 ]}
                 subsets={['cyrillic-ext', 'greek']}
             />
-            <div className="row justify-content-center no-gutters testimonial-text">
-                <h1 className="mb-5">
-                    Testimonials
-                </h1>
-            </div>
             <div className="row d-flex justify-content-center align-items-center border mb-5 card-background " style={{ height: "250px" }}>
                 <div className="mx-5" style={{ width: "100%" }}>
                     <a href="/testimonials" className="link">

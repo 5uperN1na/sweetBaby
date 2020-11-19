@@ -27,7 +27,7 @@ const TestimonialsComp: React.FC<ITestimonialsCompProps> = (props) => {
             />
             <Fade bottom>
                 <hr className="hr-style mt-5" />
-                <div className=" bg-white">
+                <div className="">
                     <div className="container">
                         {/* <div className="text-center mb-3">"{props.testimonial.quote}"</div> */}
                         <div className="row d-flex justify-content-center align-items-center">
@@ -64,6 +64,14 @@ const Layout = styled.div`
     border: 0;
     border-top: 1px solid #c9c7c7;
 }
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
 `
 
