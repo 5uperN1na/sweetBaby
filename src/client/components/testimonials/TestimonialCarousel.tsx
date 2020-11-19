@@ -66,7 +66,7 @@ const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = (props) => {
                 ]}
                 subsets={['cyrillic-ext', 'greek']}
             />
-            <div className="row d-flex justify-content-center align-items-center border mb-5 card-background " style={{ height: "250px" }}>
+            <div className="row d-flex justify-content-center align-items-center border mb-5 bg-custom-yellow" style={{ height: "250px" }}>
                 <div className="mx-5" style={{ width: "100%" }}>
                     <a href="/testimonials" className="link">
                     <div className="card-body">
@@ -80,7 +80,7 @@ const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = (props) => {
                             <div className="text-right">
                                 <span
                                     className="quote-text px-5"
-                                    style={{ fontFamily: "'Homemade Apple', sans-serif" }}>- {item.name}
+                                    style={{ fontFamily: "'Homemade Apple', sans-serif", color:"#ff7e9a" }}>- {item.name}
                                 </span>
                             </div>
                         </div>
@@ -110,7 +110,8 @@ const Layout = styled.div`
 
 .quote-marks {
     font-size: 2rem;
-    opacity: 0.2;
+    opacity: 0.8;
+    color: #bbd2fd;
 }
 
 @keyframes mymove {
@@ -119,23 +120,6 @@ const Layout = styled.div`
     80% { opacity:1; transform: translateY(0vw); }  
    100% { opacity:0; transform: translateY(0vw); } 
   }
-
-.card-background {
-    background: linear-gradient(-45deg, #b8d8f5, #f5dab8, #eebcbc, #baefa3);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
 `
 
 export interface ITestimonialCarouselProps { }
