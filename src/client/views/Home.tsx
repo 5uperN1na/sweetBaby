@@ -6,74 +6,46 @@ import TestimonialCarousel from '../components/testimonials/TestimonialCarousel'
 const Home: React.FC<IHomeProps> = (props) => {
 
     return (
-
         <Background>
             <NavBar />
-            <div className="row my-5 justify-content-center">
-                <div className="col-md-10 py-3">
-                    <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
-                        <ol className="carousel-indicators">
-                            <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
-                            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                        </ol>
-                        <div className="carousel-inner">
-                            <div className="carousel-item active" style={{ height: "400px" }}>
-                                <div className="row">
-                                    <div className="col-md-6 text-center mx-auto d-block">
-                                        <div className="text-center">
-                                            <img className='test' alt='test' src='/images/baby.jpg' width="100%" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="carousel-item" style={{ height: "400px" }}>
-                                <div className="row">
-                                    <div className="col-md-6 text-center mx-auto d-block">
-                                        <div className="text-center">
-                                            <img className='test' alt='test' src='/images/vivi4.jpg' width="100%" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="carousel-item" style={{ height: "400px" }}>
-                                <div className="row">
-                                    <div className="col-md-6 text-center mx-auto d-block">
-                                        <div className="text-center">
-                                            <img className='test' alt='test' src='/images/basketball.jpg' width="100%" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev" style={{ filter: "invert(100%)" }}>
-                        <span className="carousel-control-prev-icon" aria-hidden="true" ></span>
-                        <span className="sr-only">Previous</span>
-                    </a>
-                    <a className="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next" style={{ filter: "invert(100%)" }}>
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Next</span>
-                    </a>
-                </div>
+
+            <div className="row justify-content-center mt-3" >
+                <img
+                    className="image mobile-image my-3"
+                    style={{ borderRadius: "50%" }}
+                    src="/images/sweetbaby.jpg"
+                    alt="SweetBabyCare_Homepage_Image" />
             </div>
 
-            <hr className="mb-5" />
-
-            <TestimonialCarousel />
-
+            <div className="fixed-bottom">
+                <TestimonialCarousel />
+            </div>
         </Background>
     );
 }
 
 const Background = styled.div`
-background-color: #f5dcdb;
-height: 50%;
+background-color: #ffe98e;
+height: 35%;
 background-attachment: fixed;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 width: 100%;
+
+.image {
+    margin: 0 0 0 0;
+    height: 325px;
+    width: auto !important;
+    overflow: hidden;
+}
+
+.mobile-image {
+    @media not all and (min-width: 737px) {
+        height: 250px;
+
+    }
+}
 
 `
 
