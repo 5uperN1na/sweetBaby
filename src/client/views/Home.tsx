@@ -67,7 +67,7 @@ const Home: React.FC<IHomeProps> = (props) => {
 }
 
 const Background = styled.div`
-background-color: #eaabb0;
+background-color: #f5dcdb;
 height: 50%;
 background-attachment: fixed;
 background-position: center;

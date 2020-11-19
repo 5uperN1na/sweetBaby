@@ -39,14 +39,14 @@ const Contact: React.FC<IContactProps> = (props) => {
                 </div>
 
                 <div className="row d-flex justify-content-center align-items-center mb-5 ">
-                    <div className="col-md-7 order-md-12 bg-white my-4 border border-left-0 border-custom-nav"
+                    <div className="col-md-7 order-md-12 bg-white my-4 border border-left-0 border-light-pink"
                         style={{minHeight: "400px"}}
                     >
                         <form className="form-group"
                             onSubmit={onSubmit}>
                             <input
                                 type="text"
-                                className="input-group my-5 pt-3 border bg-light border-custom-nav w-75 mx-auto"
+                                className="input-group my-5 pt-3 border bg-light border-light=pink w-75 mx-auto"
                                 placeholder="Email Title"
                                 value={subject}
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSubject(e.target.value)}
@@ -60,7 +60,7 @@ const Contact: React.FC<IContactProps> = (props) => {
                                 style={{ opacity: 0.5 }}
                             /> */}
                             <textarea
-                                className="input-group my-3 p-1 border bg-light border-custom-nav w-75 mx-auto"
+                                className="input-group my-3 p-1 border bg-light border-light-pink w-75 mx-auto"
                                 id="subject"
                                 name="subject"
                                 placeholder="Your Message"
@@ -69,13 +69,13 @@ const Contact: React.FC<IContactProps> = (props) => {
                                 style={{ height: "170px" }}>
                             </textarea>
                             <div className="row justify-content-center">
-                                <button className="btn btn-block btn-custom-nav my-2 shoadow w-50">Email Me!</button>
+                                <button className="btn btn-block btn-light-pink my-2 shoadow w-50 text-muted">Email Me!</button>
                             </div>
                         </form>
                     </div>
                     <ColummBackground
                         style={{minHeight: "400px"}}
-                        className="col-md-4 order-md-1 background border border-right-0 border-custom-nav">
+                        className="col-md-4 order-md-1 background border border-right-0 border-light-pink">
                     </ColummBackground>
                 </div>
             </main>
