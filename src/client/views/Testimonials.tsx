@@ -82,7 +82,7 @@ const Layout = styled.div`
 `
 
 const Background = styled.div`
-background-color: #f4e6cc;
+background-color: #d7eecc;
 height: 55%;
 background-attachment: fixed;
 background-position: center;
