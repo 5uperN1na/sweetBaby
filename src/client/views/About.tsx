@@ -23,7 +23,7 @@ const About = () => {
                     subsets={['cyrillic-ext', 'greek']}
                 />
                 <header className="d-flex justify-content-center">
-                    <StyledTitle className="m-5">About Us</StyledTitle>
+                    <StyledTitle className="m-5 text-muted">About Us</StyledTitle>
                 </header>
                 <CenterDiv>
                     <OvalDiv className="d-flex justify-content-center align-items-center">
