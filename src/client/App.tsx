@@ -6,6 +6,7 @@ import About from './views/About';
 import Testimonials from './views/Testimonials';
 import Contact from './views/Contact';
 import Pastel from './views/Pastel';
+import Gallery from './views/Gallery';
 
 const App = () => {
 	return (
@@ -34,6 +35,10 @@ const App = () => {
 
 				<Route exact path="/pastel">
 					<Pastel />
+				</Route>
+
+				<Route exact path="/gallery">
+					<Gallery />
 				</Route>
 
 			</Switch>

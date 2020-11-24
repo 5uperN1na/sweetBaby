@@ -33,6 +33,9 @@ const NavBar: React.FC<NavBarProps> = (props) => {
                             <a className="nav-link text-custom-nav" href="/about">About</a>
                         </li>
                         <li className="nav-item">
+                            <a className="nav-link text-custom-nav" href="/gallery">Gallery</a>
+                        </li>
+                        <li className="nav-item">
                             <a className="nav-link text-custom-nav" href="/testimonials">Testimonials</a>
                         </li>
                         <li className="nav-item">
