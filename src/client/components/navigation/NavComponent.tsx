@@ -12,7 +12,7 @@ const NavBar: React.FC<NavBarProps> = (props) => {
                     </small>
                 </a>
             </div>
-            <nav className="bg-white navbar navbar-expand-lg navbar-light pt-3 border border-top-0 border-left-0 border-right-0 shadow-sm pr-5">
+            <nav className="fixed-top nav-margin bg-white navbar navbar-expand-lg navbar-light pt-3 border border-top-0 border-left-0 border-right-0 shadow-sm pr-5">
                 <a className="navbar-brand" href="/">
                     <img
                         className="ml-5"
@@ -55,6 +55,10 @@ const Layout = styled.div`
     text-decoration: none !important;
 }
 
+.nav-margin {
+    margin-top: 1.25rem;
+}
+
 .heart-text {
     color: red;
     animation-name: heart;
@@ -67,8 +71,7 @@ const Layout = styled.div`
     50%  {color: pink; }
     100% {color: red;}
   }
-
-`
+`;
 
 interface NavBarProps { }
 
