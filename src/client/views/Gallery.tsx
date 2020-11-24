@@ -1,71 +1,107 @@
-import React from "react";
-import { render } from "react-dom";
-import Pictures from "react-photo-gallery";
-import { photos } from "./photos";
-import styled from 'styled-components';
-import NavBar from '../components/navigation/NavComponent';
+import React, { useState, useCallback } from "react";
+// import { photos } from "./photos";
+import Carousel, { Modal, ModalGateway } from "react-images";
+
 
 const Gallery: React.FC<IGalleryProps> = (props) => {
 
-    return (
-        <>
-            <Background>
-                <NavBar />
+  const [currentImage, setCurrentImage] = useState<number>(0);
+  const [viewerIsOpen, setViewerIsOpen] = useState<boolean>(false);
 
-                <Pictures photos={photos}
+  const openLightbox = useCallback((event, { photo, index }) => {
+    setCurrentImage(index);
+    setViewerIsOpen(true);
+  }, []);
 
-                    direction={"row"}
+  const closeLightbox = () => {
+    setCurrentImage(0);
+    setViewerIsOpen(false);
+  };
 
-                />
-            </Background>
-    );
+  const photos = [
+    {
+      src: "./images/baby.jpg",
+      width: 3,
+      height: 4
+    },
+    {
+      src: "./images/baby_boy_play.jpg",
+      width: 3,
+      height: 4
+    },
+    {
+      src: "./images/happy_baby.jpg",
+      width: 3,
+      height: 4
+    },
+    {
+      src: "./images/boy_carpet.jpg",
+      width: 3,
+      height: 4
+    },
+    {
+      src: "./images/boy2.jpg",
+      width: 3,
+      height: 4
+    },
+    {
+      src: "./images/glendaboy.jpg",
+      width: 3,
+      height: 4
+    },
+    {
+      src: "./images/little_boy.jpg",
+      width: 3,
+      height: 4
+    },
+    {
+      src: "./images/playroom.jpg",
+      width: 4,
+      height: 3
+    },
+    {
+      src: "./images/vivi2.jpg",
+      width: 2,
+      height: 3
+    }
+  ];
+
+  return (
+    <div>
+      <Gallery photos={photos} onClick={openLightbox} />
+      <ModalGateway>
+        {viewerIsOpen ? (
+          <Modal onClose={closeLightbox}>
+
+            <Carousel
+              currentIndex={currentImage}
+              views={photos.map(x => ({
+                ...x,
+                srcset: x.srcSet,
+                caption: x.title
+              }))}
+            />
+
+          </Modal>
+        ) : null}
+      </ModalGateway>
+    </div>
+  );
 }
-
-
-        </>
-    )
-}
-
-const StyledTitle = styled.h1`
-    font-family: 'Beth Ellen', sans-serif;
-    font-size: 40px;
-`;
-
-
-const ColummBackground = styled.div`
-
-background: linear-gradient(-45deg, #b8d8f5, #f5dab8, #eebcbc, #baefa3);
-background-size: 400% 400%;
-animation: gradient 15s ease infinite;
-height: 100%;
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-
-`
-
-const Background = styled.div`
-background-color: #f5dcdb;
-height: 55%;
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-width: 100%;
-
-`
-
-
 
 
 export interface IGalleryProps { }
 
 export default Gallery;
+
+
+
+
+
+
+
+
+
+
+
+
