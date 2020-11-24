@@ -44,7 +44,7 @@ const Testimonials: React.FC<ITestimonialsProps> = (props) => {
         <Background>
             <Layout>
                 <NavBar />
-                <main className="container">
+                <StyledMain className="container">
                     <GoogleFontLoader
                         fonts={[
                             {
@@ -66,7 +66,7 @@ const Testimonials: React.FC<ITestimonialsProps> = (props) => {
                             <TestimonialsComp key={index} testimonial={testimonial} />
                         ))}
                     </div>
-                </main>
+                </StyledMain>
             </Layout>
         </Background>
     )
@@ -78,19 +78,25 @@ const Layout = styled.div`
     font-family: 'Beth Ellen', sans-serif;
     font-size: 40px;
 }
+`;
 
-`
+const StyledMain = styled.main`
+    margin-top: 9.375rem;
+
+    @media (max-width: 812px) and (orientation: landscape) {
+        margin-top: 4.375rem;
+    }
+`;
 
 const Background = styled.div`
-background-color: #d7eecc;
-height: 55%;
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-width: 100%;
-
-`
+    background-color: #d7eecc;
+    height: 55%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+`;
 
 export interface ITestimonialsProps { }
 

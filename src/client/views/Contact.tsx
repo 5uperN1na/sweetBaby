@@ -33,7 +33,7 @@ const Contact: React.FC<IContactProps> = (props) => {
                 ]}
                 subsets={['cyrillic-ext', 'greek']}
             />
-            <main className="container">
+            <StyledMain className="container">
                 <div className="row d-flex justify-content-center align-items-center">
                     <StyledTitle className="my-5 text-muted">Contact</StyledTitle>
                 </div>
@@ -78,10 +78,10 @@ const Contact: React.FC<IContactProps> = (props) => {
                         className="col-md-4 order-md-1 background border border-right-0 border-light-pink">
                     </ColummBackground>
                 </div>
-            </main>
+            </StyledMain>
             </Background>
         </>
-    )
+    );
 }
 
 const StyledTitle = styled.h1`
@@ -89,38 +89,42 @@ const StyledTitle = styled.h1`
     font-size: 40px;
 `;
 
+const StyledMain = styled.main`
+    margin-top: 9.375rem;
+
+    @media (max-width: 812px) and (orientation: landscape) {
+        margin-top: 4.375rem;
+    }
+`;
 
 const ColummBackground = styled.div`
+    background: linear-gradient(-45deg, #b8d8f5, #f5dab8, #eebcbc, #baefa3);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100%;
 
-background: linear-gradient(-45deg, #b8d8f5, #f5dab8, #eebcbc, #baefa3);
-background-size: 400% 400%;
-animation: gradient 15s ease infinite;
-height: 100%;
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
     }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-
-`
+`;
 
 const Background = styled.div `
-background-color: #f5dcdb;
-height: 55%;
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-width: 100%;
-
-`
-
+    background-color: #f5dcdb;
+    height: 55%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+`;
 
 export interface IContactProps { }
 
