@@ -1,151 +1,125 @@
 export const photos = [
-    {
-      src: "./images/baby.jpg",
-      width: 3,
-      height: 4
-    },
-    {
-      src: "./images/baby_boy_play.jpg",
-      width: 3,
-      height: 4
-    },
-    {
-      src: "./images/vivi7.jpg",
-      width: 3,
-      height: 4
-    },
-    {
-      src: "./images/happy_baby.jpg",
-      width: 3,
-      height: 4
-    },
-
-    {
-      src: "./images/all_smiles.jpg",
-      width: 3,
-      height: 4
-    },
-
-    {
-      src: "./images/boy_carpet.jpg",
-      width: 3,
-      height: 4
-    },
-    {
-      src: "./images/boy2.jpg",
-      width: 3,
-      height: 4
-    },
-    {
-      src: "./images/glendaboy.jpg",
-      width: 3,
-      height: 4
-    },
-    {
-      src: "./images/little_boy.jpg",
-      width: 3,
-      height: 4
-    },
+ 
     {
       src: "./images/playroom.jpg",
-      width: 4,
-      height: 3
+      width: 5,
+      height: 4
     },
     {
-      src: "./images/outside1.jpg",
+      src: "./images/playtime2.jpg",
+      width: 3,
+      height: 4
+    },
+    {
+      src: "./images/playtime3.jpg",
       width: 3,
       height: 4
     },
 
     {
-      src: "./images/group_play.jpg",
+      src: "./images/playtime4.jpg",
       width: 3,
       height: 4
     },
 
     {
-      src: "./images/baby_girl.jpg",
-      width: 3,
-      height: 4
-    },
-
-    {
-      src: "./images/baby_girl2.jpg",
-      width: 3,
-      height: 4
-    },
-
-
-    {
-      src: "./images/vivi2.jpg",
-      width: 3,
-      height: 4
-    },
-
-    {
-      src: "./images/cuddles.jpg",
-      width: 3,
-      height: 4
-    },
-
-    {
-      src: "./images/vivi4.jpg",
-      width: 3,
-      height: 4
-    },
-
-
-    {
-      src: "./images/outside2.jpg",
-      width: 3,
-      height: 4
-    },
-
-    {
-      src: "./images/julien.jpg",
-      width: 3,
-      height: 4
-    },
-
-    {
-      src: "./images/smile_boy.jpg",
-      width: 3,
-      height: 4
-    },
-
-    {
-      src: "./images/christmas1.jpg",
-      width: 3,
-      height: 4
-    },
-
-    {
-      src: "./images/christmas2.jpg",
-      width: 3,
-      height: 4
-    },
-
-    {
-      src: "./images/christmas3.jpg",
+      src: "./images/playtime5.jpg",
       width: 3,
       height: 4
     },
     {
-      src: "./images/board.jpg",
+      src: "./images/playtime6.jpg",
       width: 4,
       height: 4
     },
     {
-      src: "./images/schedule1.jpg",
+      src: "./images/playtime7.jpg",
       width: 3,
-      height: 2
+      height: 4
     },
     {
-      src: "./images/schedule2.jpg",
+      src: "./images/playtime8.jpg",
       width: 3,
-      height: 2
-    }
+      height: 4
+    },
+    {
+      src: "./images/playtime9.jpg",
+      width: 3,
+      height: 4
+    },
+    {
+      src: "./images/playtime10.jpg",
+      width: 3,
+      height: 4
+    },
 
+    {
+      src: "./images/playtime11.jpg",
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/playtime12.jpg",
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/playtime13.jpg",
+      width: 3,
+      height: 4
+    },
+
+
+    {
+      src: "./images/playtime14.jpg",
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/playtime15.jpg",
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/playtime16.jpg",
+      width: 3,
+      height: 4
+    },
+
+
+    {
+      src: "./images/playtime17.jpg",
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/playtime18.jpg",
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/playtime19.jpg",
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/playtime20.jpg",
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/playtime21.jpg",
+      width: 3,
+      height: 4
+    },
 
   ];
   
