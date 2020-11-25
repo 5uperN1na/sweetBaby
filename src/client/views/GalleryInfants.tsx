@@ -1,16 +1,17 @@
 import React, { useState, useCallback } from "react";
+import { Link } from 'react-router-dom';
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
-import { photos } from "./photos";
+import { infants } from "./infants";
 import styled from "styled-components";
 import GoogleFontLoader from "react-google-font-loader";
 import NavBar from "../components/navigation/NavComponent";
 
-const GalleryView: React.FC<IGalleryViewProps> = (props) => {
+const GalleryInfants: React.FC<IGalleryInfantsProps> = (props) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
-  const openLightbox = useCallback((event, { photo, index }) => {
+  const openLightbox = useCallback((event, { infant, index }) => {
     setCurrentImage(index);
     setViewerIsOpen(true);
   }, []);
@@ -38,22 +39,31 @@ const GalleryView: React.FC<IGalleryViewProps> = (props) => {
           subsets={['cyrillic-ext', 'greek']}
         />
         <StyledMain className="container">
-          <div className="row d-flex justify-content-center align-items-center">
-            <StyledTitle className="my-5 text-muted">Gallery</StyledTitle>
+        <div className="row d-flex justify-content-center align-items-center">
+            <StyledTitle className="my-3 text-muted">Gallery</StyledTitle>
           </div>
-          <Gallery photos={photos} onClick={openLightbox}/>
+
+          <StyledLinks>
+            <div className="row d-flex justify-content-center align-items-center">
+              <Link to={`/gallery`}>Playtime</Link>
+              <Link style={{ marginLeft: '.5rem' }} to={`/infants`}>Infants</Link>
+              <Link style={{ marginLeft: '.5rem' }} to={`/toddlers`}>Toddlers</Link>
+            </div>
+          </StyledLinks>
+       
+          <Gallery photos={infants} onClick={openLightbox}/>
           <ModalGateway>
             {viewerIsOpen ? (
               <Modal onClose={closeLightbox} >
-                 <Resize>
+                 <ImageViewer>
                 <Carousel
                   currentIndex={currentImage}
-                  views={photos.map<any>(photo => ({
-                    ...photo,
+                  views={infants.map<any>(infant => ({
+                    ...infant,
                     
                   }))}
                 />
-                </Resize>
+                </ImageViewer>
               </Modal>
             ) : null}
           </ModalGateway>
@@ -92,30 +102,31 @@ const StyledMain = styled.main`
 `;
 
 const Background = styled.div`
-    background-color: #f5dcdb;
-    height: 55%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
+background-color: #ffe98e;
+height: 55%;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+width: 100%;
 `;
 
 
-
-const Resize = styled.section`
+const ImageViewer = styled.section`
 width: 500px;
 object-fit: none;
 object-position: 10px 10%;
 
 `;
 
+const StyledLinks = styled.div`
+margin-bottom: 20px;
 
+`;
 
+export interface IGalleryInfantsProps { }
 
-export interface IGalleryViewProps { }
-
-export default GalleryView;
+export default GalleryInfants;
 
 
 
