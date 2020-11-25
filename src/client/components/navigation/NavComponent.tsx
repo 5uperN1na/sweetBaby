@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { FaHeart } from 'react-icons/fa';
 import styled from 'styled-components';
+import { FaHeart } from 'react-icons/fa';
 
-const NavBar: React.FC<NavBarProps> = (props) => {
+const NavBar: React.FC<NavBarProps> = () => {
     return (
         <Layout>
             <div className="row justify-content-center">
@@ -12,20 +12,20 @@ const NavBar: React.FC<NavBarProps> = (props) => {
                     </small>
                 </a>
             </div>
-            <nav className="fixed-top nav-margin bg-white navbar navbar-expand-lg navbar-light pt-3 border border-top-0 border-left-0 border-right-0 shadow-sm pr-5">
+            <nav className="fixed-top nav-margin bg-white navbar navbar-expand-lg navbar-light border border-top-0 border-left-0 border-right-0 shadow-sm pr-5">
                 <a className="navbar-brand" href="/">
                     <img
-                        className="ml-5"
-                        alt='test'
-                        src='/images/SweetBabyCareLogo.jpeg'
-                        style={{ width: "175px", height: "auto" }}
+                        className="ml-5 my-auto"
+                        alt='Sweet Baby Care Logo'
+                        src='/images/SBCLogo.png'
+                        style={{ width: "200px", height: "auto" }}
                     />
                 </a>
                 <button className="navbar-toggler bg-custom-nav" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav ml-auto ">
+                    <ul className="navbar-nav ml-auto pt-2">
                         <li className="nav-item">
                             <a className="nav-link text-custom-nav" href="/">Home</a>
                         </li>
