@@ -10,10 +10,22 @@ export const photos = [
       height: 4
     },
     {
+      src: "./images/vivi7.jpg",
+      width: 3,
+      height: 4
+    },
+    {
       src: "./images/happy_baby.jpg",
       width: 3,
       height: 4
     },
+
+    {
+      src: "./images/all_smiles.jpg",
+      width: 3,
+      height: 4
+    },
+
     {
       src: "./images/boy_carpet.jpg",
       width: 3,
@@ -40,56 +52,100 @@ export const photos = [
       height: 3
     },
     {
+      src: "./images/outside1.jpg",
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/group_play.jpg",
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/baby_girl.jpg",
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/baby_girl2.jpg",
+      width: 3,
+      height: 4
+    },
+
+
+    {
       src: "./images/vivi2.jpg",
-      width: 2,
-      height: 3
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/cuddles.jpg",
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/vivi4.jpg",
+      width: 3,
+      height: 4
+    },
+
+
+    {
+      src: "./images/outside2.jpg",
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/julien.jpg",
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/smile_boy.jpg",
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/christmas1.jpg",
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/christmas2.jpg",
+      width: 3,
+      height: 4
+    },
+
+    {
+      src: "./images/christmas3.jpg",
+      width: 3,
+      height: 4
+    },
+    {
+      src: "./images/board.jpg",
+      width: 4,
+      height: 4
+    },
+    {
+      src: "./images/schedule1.jpg",
+      width: 3,
+      height: 2
+    },
+    {
+      src: "./images/schedule2.jpg",
+      width: 3,
+      height: 2
     }
+
+
   ];
   
-// export const photos = [
-//   {
-//     src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
-//     width: 4,
-//     height: 3
-//   },
-//   {
-//     src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
-//     width: 1,
-//     height: 1
-//   },
-//   {
-//     src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
-//     width: 3,
-//     height: 4
-//   },
-//   {
-//     src: "https://source.unsplash.com/iecJiKe_RNg/600x799",
-//     width: 3,
-//     height: 4
-//   },
-//   {
-//     src: "https://source.unsplash.com/epcsn8Ed8kY/600x799",
-//     width: 3,
-//     height: 4
-//   },
-//   {
-//     src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
-//     width: 4,
-//     height: 3
-//   },
-//   {
-//     src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
-//     width: 3,
-//     height: 4
-//   },
-//   {
-//     src: "https://source.unsplash.com/PpOHJezOalU/800x599",
-//     width: 4,
-//     height: 3
-//   },
-//   {
-//     src: "https://source.unsplash.com/I1ASdgphUH4/800x599",
-//     width: 4,
-//     height: 3
-//   }
-// ];
