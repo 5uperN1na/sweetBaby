@@ -39,18 +39,21 @@ const GalleryView: React.FC<IGalleryViewProps> = (props) => {
         />
         <StyledMain className="container">
           <div className="row d-flex justify-content-center align-items-center">
-            <StyledTitle className="my-5 text-muted">Contact</StyledTitle>
+            <StyledTitle className="my-5 text-muted">Gallery</StyledTitle>
           </div>
           <Gallery photos={photos} onClick={openLightbox}/>
           <ModalGateway>
             {viewerIsOpen ? (
-              <Modal onClose={closeLightbox}>
+              <Modal onClose={closeLightbox} >
+                 <Resize>
                 <Carousel
                   currentIndex={currentImage}
                   views={photos.map<any>(photo => ({
                     ...photo,
+                    
                   }))}
                 />
+                </Resize>
               </Modal>
             ) : null}
           </ModalGateway>
@@ -77,6 +80,7 @@ const StyledMain = styled.main`
       transition: all .4s ease;
       -webkit-transition: all .4s ease; 
       padding: 5px;
+       
     }
 
     img:hover {
@@ -96,6 +100,17 @@ const Background = styled.div`
     background-size: cover;
     width: 100%;
 `;
+
+
+
+const Resize = styled.section`
+width: 500px;
+object-fit: none;
+object-position: 10px 10%;
+
+`;
+
+
 
 
 export interface IGalleryViewProps { }
