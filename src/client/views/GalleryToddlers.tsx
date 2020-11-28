@@ -41,16 +41,24 @@ const GalleryView: React.FC<IGalleryViewProps> = (props) => {
                 />
                 <StyledMain className="container">
                     <div className="row d-flex justify-content-center align-items-center">
-                        <StyledTitle className="my-3 text-muted">Gallery</StyledTitle>
+                        <StyledTitle className="my-3 text-muted">Toddlers</StyledTitle>
                     </div>
 
+
+
                     <StyledLinks>
-                    <div className="row d-flex justify-content-center align-items-center">
-                        <Link to={`/gallery`}>Playtime</Link>
-                        <Link style={{ marginLeft: '.5rem' }} to={`/infants`}>Infants</Link>
-                        <Link style={{ marginLeft: '.5rem' }} to={`/toddlers`}>Toddlers</Link>
-                    </div>
+                        <div className="row d-flex justify-content-center align-items-center">
+                            <Link to={`/playtime`}>Playtime</Link>
+                            <Link style={{ marginLeft: '.5rem' }} to={`/infants`}>Infants</Link>
+                            <Link style={{ marginLeft: '.5rem' }} to={`/toddlers`}>Toddlers</Link>
+                            <Link style={{ marginLeft: '.5rem' }} to={`/arts`}>Arts and Crafts</Link>
+                        </div>
                     </StyledLinks>
+
+
+
+
+
 
                     <Gallery photos={toddlers} onClick={openLightbox} />
                     <ModalGateway>
@@ -120,11 +128,11 @@ object-position: 10px 10%;
 
 `;
 
-
 const StyledLinks = styled.div`
 margin-bottom: 20px;
 
 `;
+
 
 
 export interface IGalleryViewProps { }

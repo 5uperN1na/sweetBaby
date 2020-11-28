@@ -2,16 +2,16 @@ import React, { useState, useCallback } from "react";
 import { Link } from 'react-router-dom';
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
-import { infants } from "./infants";
+import { photos } from "./photos";
 import styled from "styled-components";
 import GoogleFontLoader from "react-google-font-loader";
 import NavBar from "../components/navigation/NavComponent";
 
-const GalleryInfants: React.FC<IGalleryInfantsProps> = (props) => {
+const GalleryPlaytime: React.FC<IGalleryPlaytimeProps> = (props) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
-  const openLightbox = useCallback((event, { infant, index }) => {
+  const openLightbox = useCallback((event, { photo, index }) => {
     setCurrentImage(index);
     setViewerIsOpen(true);
   }, []);
@@ -39,8 +39,8 @@ const GalleryInfants: React.FC<IGalleryInfantsProps> = (props) => {
           subsets={['cyrillic-ext', 'greek']}
         />
         <StyledMain className="container">
-        <div className="row d-flex justify-content-center align-items-center">
-            <StyledTitle className="my-3 text-muted">Infants</StyledTitle>
+          <div className="row d-flex justify-content-center align-items-center">
+            <StyledTitle className="my-3 text-muted">Playtime</StyledTitle>
           </div>
 
           <StyledLinks>
@@ -51,19 +51,19 @@ const GalleryInfants: React.FC<IGalleryInfantsProps> = (props) => {
               <Link style={{ marginLeft: '.5rem' }} to={`/arts`}>Arts and Crafts</Link>
             </div>
           </StyledLinks>
-       
-          <Gallery photos={infants} onClick={openLightbox}/>
+
+          <Gallery photos={photos} onClick={openLightbox} />
           <ModalGateway>
             {viewerIsOpen ? (
               <Modal onClose={closeLightbox} >
-                 <ImageViewer>
-                <Carousel
-                  currentIndex={currentImage}
-                  views={infants.map<any>(infant => ({
-                    ...infant,
-                    
-                  }))}
-                />
+                <ImageViewer>
+                  <Carousel
+                    currentIndex={currentImage}
+                    views={photos.map<any>(photo => ({
+                      ...photo,
+
+                    }))}
+                  />
                 </ImageViewer>
               </Modal>
             ) : null}
@@ -103,15 +103,14 @@ const StyledMain = styled.main`
 `;
 
 const Background = styled.div`
-background-color: #ffe98e;
-height: 55%;
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-width: 100%;
+    background-color: #f5dcdb;
+    height: 55%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
 `;
-
 
 const ImageViewer = styled.section`
 width: 500px;
@@ -120,14 +119,16 @@ object-position: 10px 10%;
 
 `;
 
+
 const StyledLinks = styled.div`
 margin-bottom: 20px;
 
 `;
 
-export interface IGalleryInfantsProps { }
 
-export default GalleryInfants;
+export interface IGalleryPlaytimeProps { }
+
+export default GalleryPlaytime;
 
 
 
