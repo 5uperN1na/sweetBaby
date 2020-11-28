@@ -1,25 +1,11 @@
 import React, { useState, useCallback } from "react";
 import { Link } from 'react-router-dom';
-import Gallery from "react-photo-gallery";
-import Carousel, { Modal, ModalGateway } from "react-images";
-import { photos } from "./photos";
 import styled from "styled-components";
 import GoogleFontLoader from "react-google-font-loader";
 import NavBar from "../components/navigation/NavComponent";
 
 const GalleryView: React.FC<IGalleryViewProps> = (props) => {
-  const [currentImage, setCurrentImage] = useState(0);
-  const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
-  const openLightbox = useCallback((event, { photo, index }) => {
-    setCurrentImage(index);
-    setViewerIsOpen(true);
-  }, []);
-
-  const closeLightbox = () => {
-    setCurrentImage(0);
-    setViewerIsOpen(false);
-  };
 
   return (
     <div>
@@ -43,33 +29,62 @@ const GalleryView: React.FC<IGalleryViewProps> = (props) => {
             <StyledTitle className="my-3 text-muted">Gallery</StyledTitle>
           </div>
 
-          <StyledLinks>
-            <div className="row d-flex justify-content-center align-items-center">
-              <Link to={`/gallery`}>Playtime</Link>
-              <Link style={{ marginLeft: '.5rem' }} to={`/infants`}>Infants</Link>
-              <Link style={{ marginLeft: '.5rem' }} to={`/toddlers`}>Toddlers</Link>
+          <StyledImage>
+
+            <div className="container">
+              <div className="row d-flex justify-content-center align-items-center ml-3">
+                <div className="section">
+                <div className="col-3">
+                    <img src="/images/ac4.jpg" />
+                    <p className="title">Arts/Crafts</p>
+                    <div className="overlay"></div>
+                    <div className="button"><a href="/arts"> Explore </a>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div className="section">
+                <div className="col-3">
+                    <img src="/images/playtime3.jpg" />
+                    <p className="title">Playtime</p>
+                    <div className="overlay"></div>
+                    <div className="button"><a href="/playtime"> Explore </a>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+                <div className="row d-flex justify-content-center align-items-center">
+                <div className="section">
+                <div className=" col-3">
+                    <img src="/images/infant3.jpg" />
+                    <p className="title">Infants</p>
+                    <div className="overlay"></div>
+                    <div className="button"><a href="/infants"> Explore </a>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div className="section">
+                <div className="col-2">
+                    <img src="/images/toddler3.jpg" />
+                    <p className="title">Toddlers</p>
+                    <div className="overlay"></div>
+                    <div className="button"><a href="/toddlers"> Explore </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
-          </StyledLinks>
+          </StyledImage>
 
-          <Gallery photos={photos} onClick={openLightbox} />
-          <ModalGateway>
-            {viewerIsOpen ? (
-              <Modal onClose={closeLightbox} >
-                <ImageViewer>
-                  <Carousel
-                    currentIndex={currentImage}
-                    views={photos.map<any>(photo => ({
-                      ...photo,
 
-                    }))}
-                  />
-                </ImageViewer>
-              </Modal>
-            ) : null}
-          </ModalGateway>
         </StyledMain>
       </Background>
-    </div>
+    </div >
   );
 }
 
@@ -82,23 +97,9 @@ const StyledMain = styled.main`
     margin-top: 9.375rem;
 
     @media (max-width: 812px) and (orientation: landscape) {
-        margin-top: 4.375rem;
+            margin - top: 4.375rem;
     }
 
-    img {
-      opacity: 0.75;
-      transition: all .4s ease;
-      -webkit-transition: all .4s ease; 
-      padding: 5px;
-       
-    }
-
-    img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 1), 0 4px 8px rgba(0, 0, 0, 1);
-      opacity: 1;
-
-    }
 `;
 
 const Background = styled.div`
@@ -111,16 +112,79 @@ const Background = styled.div`
     width: 100%;
 `;
 
-const ImageViewer = styled.section`
-width: 500px;
-object-fit: none;
-object-position: 10px 10%;
+ 
 
-`;
+const StyledImage = styled.div`
+.section {
+  position: relative;
+  margin-top: 50px;
+  width: 300px;
+  height: 300px;
+}
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
 
-const StyledLinks = styled.div`
-margin-bottom: 20px;
+.section:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, .3);
+}
+
+img {
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  left: 0;
+}
+
+.title {
+  position: absolute;
+  width: 250px;
+  left: 0;
+  top: 120px;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  z-index: 1;
+  transition: top .5s ease;
+}
+
+.section:hover .title {
+  top: 90px;
+}
+
+.button {
+  position: absolute;
+  width: 250px;
+  left:0;
+  top: 180px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.button a {
+  width: 100px;
+  padding: 12px 24px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
+}
+
+.section:hover .button {
+  opacity: 1;
+}
+
 
 `;
 

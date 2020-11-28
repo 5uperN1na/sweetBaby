@@ -9,6 +9,8 @@ import Pastel from './views/Pastel';
 import GalleryView from './views/GalleryView';
 import GalleryInfants from './views/GalleryInfants';
 import GalleryToddlers from './views/GalleryToddlers';
+import GalleryPlaytime from './views/GalleryPlaytime';
+import GalleryArts from './views/GalleryArts';
  
 
 const App = () => {
@@ -50,6 +52,15 @@ const App = () => {
 
 				<Route exact path="/toddlers">
 					<GalleryToddlers />
+				</Route> 
+
+				<Route exact path="/playtime">
+					<GalleryPlaytime />
+				</Route> 
+
+				
+				<Route exact path="/arts">
+					<GalleryArts />
 				</Route> 
 
 				 
