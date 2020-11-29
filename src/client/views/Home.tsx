@@ -22,7 +22,7 @@ const Home: React.FC<IHomeProps> = () => {
 
 const Background = styled.div`
     background-color: #ffe98e;
-    height: 35%;
+    height: 50%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -47,7 +47,7 @@ const StyledImg = styled.img`
 
 const HeroDiv = styled.section`
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 20%;
     right: 20%;
     max-height: 20.31rem;
@@ -65,7 +65,7 @@ const HeroDiv = styled.section`
 
 const BottomDiv = styled.section`
     position: absolute;
-    top: 60%;
+    top: 75%;
     width: 100%;
 
     @media (max-width: 812px) and (orientation: landscape) {

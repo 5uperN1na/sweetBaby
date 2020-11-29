@@ -66,7 +66,7 @@ const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = (props) => {
                 ]}
                 subsets={['cyrillic-ext', 'greek']}
             />
-            <div className="row d-flex justify-content-center align-items-center border mb-5 bg-custom-yellow" style={{ height: "250px" }}>
+            <div className="row d-flex justify-content-center align-items-center mb-5" style={{ height: "150px" }}>
                 <div className="mx-5" style={{ width: "100%" }}>
                     <a href="/testimonials" className="link">
                     <div className="card-body">
@@ -77,7 +77,7 @@ const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = (props) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="text-right">
+                            <div className="text-center">
                                 <span
                                     className="quote-text px-5"
                                     style={{ fontFamily: "'Homemade Apple', sans-serif", color:"#ff7e9a" }}>- {item.name}
@@ -120,7 +120,7 @@ const Layout = styled.div`
     80% { opacity:1; transform: translateY(0vw); }  
    100% { opacity:0; transform: translateY(0vw); } 
   }
-`
+`;
 
 export interface ITestimonialCarouselProps { }
 
