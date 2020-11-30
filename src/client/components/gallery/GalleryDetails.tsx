@@ -8,10 +8,13 @@ import NavBar from '../navigation/NavComponent';
 // import { IGallery } from '../../utils/interfaces';
 import { useParams } from 'react-router-dom'
 import { galleries } from "../../utils/galleris";
+import Pastel from '../../views/Pastel';
+
 
 
 const GalleryDetails: React.FC<GalleryDetailsProps> = () => {
     const { id } = useParams<any>()
+
     const [galleryId, setGalleryId] = useState<any>(id)
     const [currentImage, setCurrentImage] = useState<any>(0);
     const [viewerIsOpen, setViewerIsOpen] = useState<any>(false);
@@ -24,47 +27,54 @@ const GalleryDetails: React.FC<GalleryDetailsProps> = () => {
         setCurrentImage(0);
         setViewerIsOpen(false);
     };
-
-    return (
-        <div>
-            <Background>
-                <NavBar />
-                <GoogleFontLoader
-                    fonts={[
-                        {
-                            font: 'Homemade Apple',
-                            weights: [400, '400i'],
-                        },
-                        {
-                            font: 'Beth Ellen',
-                            weights: [400, '400i'],
-                        },
-                    ]}
-                    subsets={['cyrillic-ext', 'greek']}
-                />
-                <StyledMain className="container">
-                    <div className="row d-flex justify-content-center align-items-center">
-                        <StyledTitle className="my-3 text-muted">{galleries[galleryId].name} Gallery</StyledTitle>
-                    </div>
-                    <Gallery photos={galleries[galleryId].photos} onClick={openLightbox} />
-                    <ModalGateway>
-                        {viewerIsOpen ? (
-                            <Modal onClose={closeLightbox} >
-                                <ImageViewer>
-                                    <Carousel
-                                        currentIndex={currentImage}
-                                        views={galleries[`${galleryId}`].photos.map<any,any[]>((gallery: any) => ({
-                                            ...gallery,
-                                        }))}
-                                    />
-                                </ImageViewer>
-                            </Modal>
-                        ) : null}
-                    </ModalGateway>
-                </StyledMain>
-            </Background>
-        </div >
-    );
+    if (galleryId > galleries.length) {
+        return (
+            <>
+                <Pastel />
+            </>
+        )
+    } else {
+        return (
+            <div>
+                <Background>
+                    <NavBar />
+                    <GoogleFontLoader
+                        fonts={[
+                            {
+                                font: 'Homemade Apple',
+                                weights: [400, '400i'],
+                            },
+                            {
+                                font: 'Beth Ellen',
+                                weights: [400, '400i'],
+                            },
+                        ]}
+                        subsets={['cyrillic-ext', 'greek']}
+                    />
+                    <StyledMain className="container">
+                        <div className="row d-flex justify-content-center align-items-center">
+                            <StyledTitle className="my-3 text-muted">{galleries[galleryId].name} Gallery</StyledTitle>
+                        </div>
+                        <Gallery photos={galleries[galleryId].photos} onClick={openLightbox} />
+                        <ModalGateway>
+                            {viewerIsOpen ? (
+                                <Modal onClose={closeLightbox} >
+                                    <ImageViewer>
+                                        <Carousel
+                                            currentIndex={currentImage}
+                                            views={galleries[`${galleryId}`].photos.map<any, any[]>((gallery: any) => ({
+                                                ...gallery,
+                                            }))}
+                                        />
+                                    </ImageViewer>
+                                </Modal>
+                            ) : null}
+                        </ModalGateway>
+                    </StyledMain>
+                </Background>
+            </div >
+        );
+    }
 }
 
 const StyledTitle = styled.h1`
