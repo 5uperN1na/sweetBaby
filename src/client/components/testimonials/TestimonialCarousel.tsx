@@ -8,15 +8,15 @@ import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
 const TestimonialsArray = [
     {
         id: 1,
-        name: "Agatha E.",
-        quote: "I use babysitter often. I love babysitter.",
-        description: "Bacon ipsum dolor amet cow tenderloin hamburger, chicken shoulder frankfurter strip steak prosciutto turducken. Ham bresaola turducken salami sausage leberkas. Sausage beef pancetta landjaeger, flank capicola pork loin. Pork loin boudin chicken kevin turkey short ribs spare ribs tenderloin pork belly alcatra. Prosciutto t-bone chuck turkey, chislic tri-tip salami.",
+        name: "Stephanie K.",
+        quote: "We would highly recommend to any new parent who is looking for a home, childcare option.",
+        description: "We decided on Sweet Baby Care because we wanted our baby to be in a home environment—not just a large center with a bunch of kids in one classroom.  The home is in a quiet, peaceful neighborhood in Frisco, so it is easy access to our jobs and daily commute.  Ms. Glenda is so sweet and giving to our daughter.  We would highly recommend to any new parent who is looking for a home, childcare option.",
     },
     {
         id: 2,
-        name: "Georg P.",
-        quote: "It fits our needs perfectly. I have gotten at least 50 times the value from babysitter.",
-        description: "Short ribs landjaeger kielbasa drumstick, alcatra porchetta jowl beef sausage t-bone. Prosciutto frankfurter shank swine ball tip fatback shankle beef. Sirloin fatback porchetta ground round shankle flank. Tenderloin ground round tongue pork chop. Bacon porchetta beef ribs meatloaf, filet mignon alcatra pork prosciutto shoulder pastrami buffalo rump chuck picanha.",
+        name: "Jose S.",
+        quote: " From the first day we dropped him off, we felt so safe and comfortable.",
+        description: "Our family decided to bring our son to Ms. Glenda (Sweet Baby Care) because she keeps a low teacher-to-child ratio in her home.  He was 3 months old when we first brought him to daycare.  From the first day we dropped him off, we felt so safe and comfortable.  She does an amazing job taking care of our child.",
     },
     {
         id: 3,

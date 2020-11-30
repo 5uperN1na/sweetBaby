@@ -53,7 +53,7 @@ const GalleryDetails: React.FC<GalleryDetailsProps> = () => {
                     />
                     <StyledMain className="container">
                         <div className="row d-flex justify-content-center align-items-center">
-                            <StyledTitle className="my-3 text-muted">{galleries[galleryId].name} Gallery</StyledTitle>
+                            <StyledTitle className="my-3 text-muted">{galleries[galleryId].name}</StyledTitle>
                         </div>
                         <Gallery photos={galleries[galleryId].photos} onClick={openLightbox} />
                         <ModalGateway>
