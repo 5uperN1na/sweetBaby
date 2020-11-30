@@ -27,7 +27,7 @@ const GalleryDetails: React.FC<GalleryDetailsProps> = () => {
         setCurrentImage(0);
         setViewerIsOpen(false);
     };
-    if (galleryId > galleries.length) {
+    if (galleryId > galleries.length || isNaN(galleryId)) {
         return (
             <>
                 <Pastel />
