@@ -33,8 +33,8 @@ const Gallery: React.FC<IGalleryProps> = () => {
                             {/* {galleries.map(gallery => gallery.photos.map(photo => (
                                 <GalleryCard key={`photo-${photo.src}`} photo={photo} gallery={gallery}/>
                             )))} */}
-                            {galleries.map(gallery => (
-                                <GalleryCard key={`photo-${gallery.name}`} gallery={gallery} />
+                            {galleries.map((gallery, index) => (
+                                <GalleryCard key={`photo-${gallery.name}`} gallery={gallery} index={index} />
                             ))}
                         </div>
                     </section>
