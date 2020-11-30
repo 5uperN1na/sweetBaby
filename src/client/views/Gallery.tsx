@@ -68,6 +68,7 @@ const Background = styled.div`
     width: 100%;
 `;
 
+
 export interface IGalleryProps { }
 
 export default Gallery;

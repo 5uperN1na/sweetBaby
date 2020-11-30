@@ -17,8 +17,16 @@ const GalleryCard: React.FC<GalleryCardProps> = (props) => {
     );
 }
 
+type gallery = {
+    src?: string;
+    width?: number;
+    height?: number;
+    id?: number;
+    name?: string;
+}
+
 interface GalleryCardProps {
-    gallery?: IGallery;
+    gallery?:gallery;
 }
 
 export default GalleryCard;

@@ -12,7 +12,7 @@ import { galleries } from "../../utils/galleris";
 
 const GalleryDetails: React.FC<GalleryDetailsProps> = () => {
     const { id } = useParams<any>()
-    const [galleryId, setGalleryId] = useState<number>(Number(id) - 1)
+    const [galleryId, setGalleryId] = useState<any>(Number(id) - 1)
     const [currentImage, setCurrentImage] = useState(0);
     const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
@@ -55,7 +55,7 @@ const GalleryDetails: React.FC<GalleryDetailsProps> = () => {
                                 <ImageViewer>
                                     <Carousel
                                         currentIndex={currentImage}
-                                        views={galleries[`${galleryId}`].photos.map<any>(gallery => ({
+                                        views={galleries[`${galleryId}`].photos.map<any>((gallery: any) => ({
                                             ...gallery,
                                         }))}
                                     />
