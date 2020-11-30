@@ -7,11 +7,11 @@ import Testimonials from './views/Testimonials';
 import Contact from './views/Contact';
 import Pastel from './views/Pastel';
 import GalleryView from './views/Gallery';
+// import GalleryDetails from './components/gallery/GalleryDetails';
  
 
 const App = () => {
 	return (
-
 		<BrowserRouter>
 			<Switch>
 				<Route exact path="/">
@@ -38,14 +38,13 @@ const App = () => {
 					<Pastel />
 				</Route>
 
+				{/* <Route exact path="/gallery/view/:id">
+					<GalleryDetails />
+				</Route> */}
+
 				<Route exact path="/gallery">
 					<GalleryView />
 				</Route>
-
-			 
-				
-				 
-
 			</Switch>
 		</BrowserRouter>
 	)
