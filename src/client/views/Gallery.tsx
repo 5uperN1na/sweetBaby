@@ -29,14 +29,14 @@ const Gallery: React.FC<IGalleryProps> = () => {
                         <StyledTitle className="my-3 text-muted">Gallery</StyledTitle>
                     </div>
                     <section className="row justify-content-center mt-5">
-                        <div className="col-10">
+                        {/* <div className="col-10"> */}
                             {/* {galleries.map(gallery => gallery.photos.map(photo => (
                                 <GalleryCard key={`photo-${photo.src}`} photo={photo} gallery={gallery}/>
                             )))} */}
                             {galleries.map((gallery, index) => (
                                 <GalleryCard key={`photo-${gallery.name}`} gallery={gallery} index={index} />
                             ))}
-                        </div>
+                        {/* </div> */}
                     </section>
                 </StyledMain>
             </Background>
