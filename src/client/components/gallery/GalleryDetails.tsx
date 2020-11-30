@@ -13,9 +13,9 @@ import { galleries } from "../../utils/galleris";
 const GalleryDetails: React.FC<GalleryDetailsProps> = () => {
     const { id } = useParams<any>()
     const [galleryId, setGalleryId] = useState<any>(id)
-    const [currentImage, setCurrentImage] = useState(0);
-    const [viewerIsOpen, setViewerIsOpen] = useState(false);
-    const openLightbox = React.useCallback((event, { photo, index }) => {
+    const [currentImage, setCurrentImage] = useState<any>(0);
+    const [viewerIsOpen, setViewerIsOpen] = useState<any>(false);
+    const openLightbox = React.useCallback<any>((event: any, { photo, index }: any) => {
         setCurrentImage(index);
         setViewerIsOpen(true);
     }, []);
@@ -53,7 +53,7 @@ const GalleryDetails: React.FC<GalleryDetailsProps> = () => {
                                 <ImageViewer>
                                     <Carousel
                                         currentIndex={currentImage}
-                                        views={galleries[`${galleryId}`].photos.map<[]>((gallery: any) => ({
+                                        views={galleries[`${galleryId}`].photos.map<any,any[]>((gallery: any) => ({
                                             ...gallery,
                                         }))}
                                     />
