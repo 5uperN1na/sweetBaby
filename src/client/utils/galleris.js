@@ -4,6 +4,11 @@ export const galleries = [
       "name": "Infants",
       "photos": [
         {
+          "src": "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png",
+          "width": 5,
+          "height": 4
+        },
+        {
           "src": "./playroom.jpg",
           "width": 5,
           "height": 4
@@ -29,7 +34,11 @@ export const galleries = [
       "id": 2,
       "name": "Arts",
       "photos": [
-  
+        {
+          "src": "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png",
+          "width": 5,
+          "height": 4
+        },
         {
           src: "./images/ac1.jpg",
           width: 4,
@@ -99,7 +108,11 @@ export const galleries = [
       "id": 3,
       "name": "Toddlers",
       "photos": [
-  
+        {
+          "src": "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png",
+          "width": 5,
+          "height": 4
+        },
         {
           src: "./images/toddler1.jpg",
           width: 3,
