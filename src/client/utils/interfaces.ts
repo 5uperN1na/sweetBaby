@@ -12,6 +12,7 @@ export interface IPhoto {
 }
 
 export interface IGallery {
+    
     id?: number;
     name?: string;
     photos?: [

@@ -1,17 +1,16 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { IGallery, IPhoto } from '../../utils/interfaces';
+import { IGallery } from '../../utils/interfaces';
 import { Link } from 'react-router-dom';
 
-const GalleryCard: React.FC<GalleryCardProps> = ({ gallery, photo }) => {
+const GalleryCard: React.FC<GalleryCardProps> = (props) => {
     return (
         <section className="row justify-content-center">
             <div className="card" style={{ width: "18rem"}}>
-                <img src={photo.src} className="card-img-top" alt="..." />
                 <div className="card-body">
-                <h5 className="card-title">{gallery?.name}</h5>
+                <h5 className="card-title">{props.gallery.name}</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <Link to={{pathname: `/gallery/view/${gallery.id}`}}>Click</Link>
+                    <Link to={{pathname: `/gallery/${props.gallery.id}`}}>Click</Link>
                 </div>
             </div>
         </section>
@@ -19,8 +18,7 @@ const GalleryCard: React.FC<GalleryCardProps> = ({ gallery, photo }) => {
 }
 
 interface GalleryCardProps {
-    photo: IPhoto;
-    gallery: IGallery;
+    gallery?: IGallery;
 }
 
 export default GalleryCard;

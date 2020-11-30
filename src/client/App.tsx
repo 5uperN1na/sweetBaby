@@ -7,6 +7,7 @@ import Testimonials from './views/Testimonials';
 import Contact from './views/Contact';
 import Pastel from './views/Pastel';
 import GalleryView from './views/Gallery';
+import GalleryDetails from './components/gallery/GalleryDetails';
 // import GalleryDetails from './components/gallery/GalleryDetails';
  
 
@@ -38,9 +39,9 @@ const App = () => {
 					<Pastel />
 				</Route>
 
-				{/* <Route exact path="/gallery/view/:id">
+				<Route exact path="/gallery/:id">
 					<GalleryDetails />
-				</Route> */}
+				</Route>
 
 				<Route exact path="/gallery">
 					<GalleryView />

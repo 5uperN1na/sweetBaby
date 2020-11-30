@@ -4,7 +4,7 @@ import styled from "styled-components";
 import GoogleFontLoader from "react-google-font-loader";
 import NavBar from "../components/navigation/NavComponent";
 import GalleryCard from "../components/gallery/GalleryCard";
-import { galleries } from '../views/images';
+import { galleries } from '../utils/galleris';
 
 const Gallery: React.FC<IGalleryProps> = () => {
     return (
@@ -30,12 +30,12 @@ const Gallery: React.FC<IGalleryProps> = () => {
                     </div>
                     <section className="row justify-content-center mt-5">
                         <div className="col-10">
-                            {galleries.map(gallery => gallery.photos.map(photo => (
+                            {/* {galleries.map(gallery => gallery.photos.map(photo => (
                                 <GalleryCard key={`photo-${photo.src}`} photo={photo} gallery={gallery}/>
-                            )))}
-                            {/* {galleries.map(gallery => (
+                            )))} */}
+                            {galleries.map(gallery => (
                                 <GalleryCard key={`photo-${gallery.name}`} gallery={gallery} />
-                            ))} */}
+                            ))}
                         </div>
                     </section>
                 </StyledMain>
