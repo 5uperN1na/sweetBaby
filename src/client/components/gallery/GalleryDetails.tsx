@@ -12,7 +12,6 @@ import { galleries } from "../../utils/galleris";
 
 const GalleryDetails: React.FC<GalleryDetailsProps> = () => {
     const { id } = useParams<any>()
-    //issues with this solution is that gallery id cannot go out of sync... it must follow the order of 1,2,3 ... 
     const [galleryId, setGalleryId] = useState<any>(id)
     const [currentImage, setCurrentImage] = useState(0);
     const [viewerIsOpen, setViewerIsOpen] = useState(false);
