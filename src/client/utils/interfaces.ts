@@ -5,11 +5,20 @@ export interface ITestimonial {
     description?: string,
 }
 
+export interface IPhoto {
+    src?: string;
+    width?: number;
+    height?: number;
+}
 
 export interface IGallery {
     id?: number;
     name?: string;
-    photos?: []; 
-
+    photos?: [
+        {
+            src?: string;
+            width?: number;
+            height?: number;
+        }
+    ]; 
 }
- 
