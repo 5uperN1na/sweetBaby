@@ -9,7 +9,7 @@ import Pastel from './views/Pastel';
 import GalleryView from './views/Gallery';
 import GalleryDetails from './components/gallery/GalleryDetails';
 // import GalleryDetails from './components/gallery/GalleryDetails';
- 
+
 
 const App = () => {
 	return (
@@ -34,11 +34,6 @@ const App = () => {
 				<Route exact path="/contact">
 					<Contact />
 				</Route>
-
-				<Route exact path="/pastel">
-					<Pastel />
-				</Route>
-
 				<Route exact path="/gallery/:id">
 					<GalleryDetails />
 				</Route>
@@ -46,6 +41,7 @@ const App = () => {
 				<Route exact path="/gallery">
 					<GalleryView />
 				</Route>
+				<Route path="*" component={Pastel} />
 			</Switch>
 		</BrowserRouter>
 	)

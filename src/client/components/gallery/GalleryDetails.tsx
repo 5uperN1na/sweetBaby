@@ -15,7 +15,6 @@ const GalleryDetails: React.FC<GalleryDetailsProps> = () => {
     const [galleryId, setGalleryId] = useState<any>(id)
     const [currentImage, setCurrentImage] = useState(0);
     const [viewerIsOpen, setViewerIsOpen] = useState(false);
-
     const openLightbox = React.useCallback((event, { photo, index }) => {
         setCurrentImage(index);
         setViewerIsOpen(true);
@@ -45,9 +44,8 @@ const GalleryDetails: React.FC<GalleryDetailsProps> = () => {
                 />
                 <StyledMain className="container">
                     <div className="row d-flex justify-content-center align-items-center">
-                <StyledTitle className="my-3 text-muted">{galleries[galleryId].name} Gallery</StyledTitle>
+                        <StyledTitle className="my-3 text-muted">{galleries[galleryId].name} Gallery</StyledTitle>
                     </div>
-
                     <Gallery photos={galleries[galleryId].photos} onClick={openLightbox} />
                     <ModalGateway>
                         {viewerIsOpen ? (
@@ -55,7 +53,7 @@ const GalleryDetails: React.FC<GalleryDetailsProps> = () => {
                                 <ImageViewer>
                                     <Carousel
                                         currentIndex={currentImage}
-                                        views={galleries[`${galleryId}`].photos.map<any>((gallery: any) => ({
+                                        views={galleries[`${galleryId}`].photos.map<[]>((gallery: any) => ({
                                             ...gallery,
                                         }))}
                                     />
