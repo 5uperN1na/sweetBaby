@@ -4,9 +4,11 @@ import { IGallery } from '../../utils/interfaces';
 import { Link } from 'react-router-dom';
 import { galleries } from '../../utils/galleris';
 import styled from 'styled-components';
+import GoogleFontLoader from 'react-google-font-loader';
 
 const GalleryCard: React.FC<GalleryCardProps> = (props, index) => {
     return (
+
         // <section className="row justify-content-center">
         //     <div className="card" style={{ width: "18rem" }}>
         //         <img className="card-img-top embed-responsive-item" src={props.gallery.cover} />
@@ -31,57 +33,75 @@ const GalleryCard: React.FC<GalleryCardProps> = (props, index) => {
         // </div>
         // </div >
 
+        <div>
 
-        <StyledCard>
-        <div className="col-md-5 mb-sm-5 my-3">
+            <GoogleFontLoader
+                fonts={[
+                    {
+                        font: 'Permanent Marker',
+                        weights: [400, '400i'],
+                    },
+                   
+                ]}
+                // subsets={['cyrillic-ext', 'greek']}
+            />
+            <StyledCard>
+                <div className="col-md-5 mb-sm-5 my-3">
 
-            <div className="polaroid">
-                <Link to={{ pathname: `/gallery/${props.index}` }}><img className="card-img-top embed-responsive-item" src={props.gallery.cover} /></Link>
+                    <div className="polaroid">
+                        <Link to={{ pathname: `/gallery/${props.index}` }}><img className="card-img-top embed-responsive-item" src={props.gallery.cover} /></Link>
+                            <p>{props.gallery.name}</p>
+                         
+                    </div>
+                </div>
+            </StyledCard>
 
-                <p>{props.gallery.name}</p>
-            </div>
         </div>
-        </StyledCard>
+
+
 
     );
 }
 
 
 const StyledCard = styled.div`
- 
- 
-
 .polaroid {
   position: relative;
   width: 250px;
-
- 
+  border-radius: 0px;
 }
  
 .polaroid img {
- 
-  border: 15px solid #fff;
-  border-bottom: 60px solid #fff;
-  -webkit-box-shadow: 3px 3px 3px #777;
-     -moz-box-shadow: 3px 3px 3px #777;
-          box-shadow: 3px 3px 3px #777;
+  border: 1 px solid darkgrey;
+  background-color: white;
+  padding: 15px 15px 60px 15px;
+  box-shadow: 5px 10px 20px darkgrey;
+  border-radius: 0px;
+
 }
 
- 
 .polaroid p {
   position: absolute;
+  top: 310px;
   text-align: center;
   width: 100%;
   bottom: 10px;
-  font: 400 20px/1 'Kaushan Script', cursive;
-  color: #FF7E9B;
+  color: #464646;
+  font-family: 'Permanent Marker';
+  font-size: 30px;
 }
 
+.polaroid:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    z-index: 10;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+  }
+
 `;
-
-
-
-
 
 
 type gallery = {
