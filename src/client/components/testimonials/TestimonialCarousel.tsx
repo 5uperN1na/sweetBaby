@@ -20,27 +20,28 @@ const TestimonialsArray = [
     },
     {
         id: 3,
-        name: "Chiarra I.",
-        quote: "We've used babysitter for the last five years.",
-        description: "Capicola alcatra flank, porchetta hamburger pork loin prosciutto pastrami t-bone shoulder swine pig kevin. Chuck venison pork belly strip steak bacon picanha turducken. Biltong hamburger short ribs, pork loin tongue venison fatback brisket ball tip chuck ground round. Turkey leberkas hamburger swine kevin short loin ball tip pork chop ham cupim andouille pork loin.",
+        name: "Hernan S.",
+        quote: "Our children are able to speak and communicate in Spanish.",
+        description: "We wanted to bring our children to Sweet Baby Care because we wanted them to learn Spanish.  My wife and I believe that it is so important for children to learn other languages especially when they are young.  Ms. Glenda uses a very practical approach to her teachings.  Our children are able to speak words in Spanish.",
     },
     {
         id: 4,
-        name: "Cathyleen Q.",
-        quote: "Babysitter was worth a fortune to my company. I am really satisfied with my babysitter. It's all good. ",
-        description: "Pancetta strip steak turkey boudin filet mignon ball tip. Ribeye salami corned beef shankle meatball, fatback leberkas pig pastrami brisket pancetta. Swine shank ham pastrami. Pork sausage buffalo capicola, meatball chuck chislic beef ribs beef. Sirloin leberkas flank pastrami.",
+        name: "Sharla M.",
+        quote: " I trust Ms. Glenda with my infant daughter! ",
+        description: "I trust Ms. Glenda with my infant daughter!  I can tell she takes care of her just like it was her own daughter.  Ms. Glenda is gentle, loving, and protective.  She lets me know all the details of my daughter’s day and that makes me feel like I made a good choice. ",
     },
     {
         id: 5,
-        name: "Sela B.",
-        quote: "Very easy to use.",
-        description: "Drumstick pork loin chicken pork chop tongue cow swine. Fatback kielbasa tri-tip, turkey turducken t-bone ribeye chuck tenderloin bresaola picanha tongue. Chislic ball tip chuck, turducken frankfurter corned beef hamburger strip steak tail venison landjaeger. Tenderloin kevin filet mignon beef ribs meatball biltong. Tail tenderloin capicola swine meatloaf frankfurter.",
+        name: "Paula S.",
+        quote: "Ms. Glenda is actively engaged in her school.",
+        description: "We chose Sweet Baby Care for a few reasons:  First, it is in a home and we prefer a that over a large center.  Second, she offers a well-rounded program from Spanish to full meal service included within the tuition.  And last, Ms. Glenda is actively engaged in her school...she is there every day to greet us at the front door and walks the children out in the evening.  She cares a lot about the welfare of the children. ",
     },
 ];
 
+
 const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = (props) => {
 
-    const [item, setItem] = React.useState<any>({ quote: "After using Sweet Baby Babysitter my business skyrocketed! Your company is truly upstanding and is behind its product 100%.", name: "Muffin W." })
+    const [item, setItem] = React.useState<any>({ quote: "If you are looking for quality, wholesome childcare, then look no further", name: "Jenna H." })
 
     React.useEffect(() => {
         const interval = setInterval(() => {
