@@ -5,11 +5,11 @@ import GoogleFontLoader from 'react-google-font-loader';
 
 
 const About = () => {
-    return(
+    return (
         <Background>
             <NavBar />
             <main className="container-fluid">
-            <GoogleFontLoader
+                <GoogleFontLoader
                     fonts={[
                         {
                             font: 'Homemade Apple',
@@ -59,7 +59,9 @@ const About = () => {
                     <div className="row justify-content-center">
                         <article className="col-md-5">
                             <p className="text-justify">
-                                Spicy jalapeno bacon ipsum dolor amet rump eiusmod t-bone proident, exercitation minim bacon leberkas officia qui incididunt est enim. Laboris ad in, chicken eu landjaeger tail filet mignon eiusmod lorem. Tenderloin et adipisicing nisi veniam lorem buffalo exercitation shank bresaola corned beef aliqua. In ullamco aliquip, shank drumstick pancetta consectetur turducken jerky porchetta elit tail culpa esse. Exercitation sed reprehenderit, anim jowl tongue cow corned beef andouille buffalo aliquip turducken pork loin lorem.
+                                Glenda Guilarte arrived from Venezuela in 2018 where she was an elementary schoolteacher for 24 years.  She has always loved to be with children, so it only made sense that she began teaching in her home country.  When she arrived in the United States, her goal was to, one day, open her own school.  Glenda just loves being with her little kiddos helping to instill good, strong values and morals while having fun---always smiling, laughing, and playing!
+                                In her spare time, she spends it with her family, always.  Glenda also loves to travel and explore new places.  She currently lives in Frisco with her husband and 15-year-old daughter, Sophia.
+
                             </p>
                         </article>
                         <article className="col-md-5">

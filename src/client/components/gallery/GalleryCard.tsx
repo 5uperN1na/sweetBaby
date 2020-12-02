@@ -82,23 +82,18 @@ const StyledCard = styled.div`
 
 .polaroid p {
   position: absolute;
-  top: 310px;
+  top: 318px;
   text-align: center;
   width: 100%;
   bottom: 10px;
   color: #464646;
   font-family: 'Permanent Marker';
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .polaroid:hover {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    transform: scale(1.2);
-    z-index: 10;
-    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    transform: scale(1.1);
+    transition-duration: 2s;
   }
 
 `;
