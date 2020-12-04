@@ -53,7 +53,7 @@ const GalleryDetails: React.FC<GalleryDetailsProps> = () => {
                     />
                     <StyledMain className="container">
                         <div className="row d-flex justify-content-center align-items-center">
-                            <StyledTitle className="my-3 text-muted">{galleries[galleryId].name}</StyledTitle>
+                            <StyledTitle className="my-5 text-muted">{galleries[galleryId].name}</StyledTitle>
                         </div>
                         <Gallery photos={galleries[galleryId].photos} onClick={openLightbox} />
                         <ModalGateway>
@@ -83,7 +83,8 @@ const StyledTitle = styled.h1`
 `;
 
 const StyledMain = styled.main`
-    margin-top: 9.375rem;
+    margin-top: 5rem;
+    margin-bottom:  5rem;
     @media (max-width: 812px) and (orientation: landscape) {
         margin-top: 4.375rem;
     }
@@ -119,10 +120,7 @@ object-position: 10px 10%;
 `;
 
 
-const StyledLinks = styled.div`
-margin-bottom: 20px;
-`;
-
+ 
 
 export interface GalleryDetailsProps { }
 

@@ -69,6 +69,11 @@ const StyledCard = styled.div`
   position: relative;
   width: 250px;
   border-radius: 0px;
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function:ease-in-out;
+ 
+  
 }
  
 .polaroid img {
@@ -91,11 +96,9 @@ const StyledCard = styled.div`
   font-size: 20px;
 }
 
-.polaroid:hover {
-    transform: scale(1.1);
-    transition-duration: 2s;
-  }
-
+.polaroid:hover  {
+ transform: scale(1.1);
+}
 `;
 
 

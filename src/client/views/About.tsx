@@ -59,14 +59,15 @@ const About = () => {
                     <div className="row justify-content-center">
                         <article className="col-md-5">
                             <p className="text-justify">
-                                Glenda Guilarte arrived from Venezuela in 2018 where she was an elementary schoolteacher for 24 years.  She has always loved to be with children, so it only made sense that she began teaching in her home country.  When she arrived in the United States, her goal was to, one day, open her own school.  Glenda just loves being with her little kiddos helping to instill good, strong values and morals while having fun---always smiling, laughing, and playing!
-                                In her spare time, she spends it with her family, always.  Glenda also loves to travel and explore new places.  She currently lives in Frisco with her husband and 15-year-old daughter, Sophia.
+                            Sweet Baby Care is a home-based childcare program specializing in infants and toddlers. Glenda Guilarte is a licensed family childcare provider in Frisco, TX.  Glenda cares for infants (6 weeks) up to 4 years old.  The infant program works with the parents to customize a routine based on each infant’s needs.  The focus of the toddlers’ program is to maximize each child’s potential through learning and play. The hours of operations are 6:30 a.m. to 6:00 p.m. Monday through Friday.  Sweet Baby Care is registered by the state of Texas childcare licensing division and all the staff is CPR certified.  It is also a pet friendly environment.    
 
                             </p>
                         </article>
                         <article className="col-md-5">
                             <p className="text-justify">
-                                Quis in incididunt sint flank ut in shankle picanha, jerky pork chop chislic leberkas. Pork belly andouille shankle dolore, pancetta lorem ut est. Turducken biltong buffalo deserunt alcatra. Picanha shank veniam, pastrami proident in sed leberkas in ut frankfurter deserunt short loin ut. Alcatra pariatur kielbasa, filet mignon ex non meatloaf reprehenderit consectetur fugiat. Landjaeger chicken brisket strip steak cupim rump pastrami elit chuck dolor dolore cupidatat nostrud tongue. Doner capicola minim commodo, laboris salami ut filet mignon.
+                                Ms. Glenda arrived from Venezuela in 2018.  Having been an elementary teacher for 24 years, Ms. Glenda truly love kids!  It was her dream to, one day, have her own school. When she arrived in the United States, she decided to make her dream a reality.  The mission of Sweet Baby Care is to instill good, strong values and morals while having fun and always smiling, laughing, and playing!
+                                In her spare time, she spends it with her family.  Glenda also loves to travel and explore new places.  She currently lives in Frisco with her husband and 15-year-old daughter, Sophia and their dog Sammy.
+
                             </p>
                         </article>
                     </div>

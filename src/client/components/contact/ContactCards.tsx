@@ -11,7 +11,7 @@ const ContactCards: React.FC<IContactCardProps> = () => {
                             <StyledImg src="/images/smartphone.png" className="card-img-top" />
                         </div>
                         <div className="card-body">
-                            <StyledPara className="card-text text-center landscape-mobile-text">999-999-9999</StyledPara>
+                            <StyledPara className="card-text text-center landscape-mobile-text">469-450-6429</StyledPara>
                         </div>
                     </div>
                 </div>
@@ -24,11 +24,12 @@ const ContactCards: React.FC<IContactCardProps> = () => {
                         </div>
                         <div className="card-body">
                             <StyledPara className="card-text text-center landscape-mobile-text">
-                                1234 Test Street<br />
-                                Houston, TX 12345
+                                9706 Adolphus Drive<br />
+                                Frisco, TX 75035
                             </StyledPara>
                             <div className="d-flex justify-content-center">
-                                <iframe className="mt-2" title="map" src="https://maps.google.com/maps?q=houston&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0" allowFullScreen ></iframe>
+                                {/* <iframe className="mt-2" title="map" src="https://maps.google.com/maps?q=houston&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0" allowFullScreen ></iframe> */}
+                                <iframe className="mt-2" title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3341.5366132517656!2d-96.79789748480917!3d33.12126428086946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3c55b2ed9b15%3A0x4c8c7de0284c84df!2s9706%20Adolphus%20Dr%2C%20Frisco%2C%20TX%2075035!5e0!3m2!1sen!2sus!4v1607115440655!5m2!1sen!2sus"></iframe>
                             </div>
                         </div>
                     </div>
