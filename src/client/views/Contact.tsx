@@ -64,6 +64,8 @@ const CardContainer = styled.section`
     right: 0;
 
     
+
+    
     @media (min-height: 1001px) {
         top: 63%;
     }

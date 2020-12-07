@@ -28,8 +28,7 @@ const ContactCards: React.FC<IContactCardProps> = () => {
                                 Frisco, TX 75035
                             </StyledPara>
                             <div className="d-flex justify-content-center">
-                                {/* <iframe className="mt-2" title="map" src="https://maps.google.com/maps?q=houston&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0" allowFullScreen ></iframe> */}
-                                <iframe className="mt-2" title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3341.5366132517656!2d-96.79789748480917!3d33.12126428086946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3c55b2ed9b15%3A0x4c8c7de0284c84df!2s9706%20Adolphus%20Dr%2C%20Frisco%2C%20TX%2075035!5e0!3m2!1sen!2sus!4v1607115440655!5m2!1sen!2sus"></iframe>
+                                <StyledIframe className="mt-2 mobile" title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3341.5366132517656!2d-96.79789748480917!3d33.12126428086946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3c55b2ed9b15%3A0x4c8c7de0284c84df!2s9706%20Adolphus%20Dr%2C%20Frisco%2C%20TX%2075035!5e0!3m2!1sen!2sus!4v1607115440655!5m2!1sen!2sus" frameBorder="0" allowFullScreen></StyledIframe>
                             </div>
                         </div>
                     </div>
@@ -43,12 +42,15 @@ const ContactCards: React.FC<IContactCardProps> = () => {
                         </div>
                         <div className="card-body">
                             <div className="card-text text-center">
-                                <StyledLink className="text-body landscape-mobile-text" href="mailto:test@yoursite.com?subject=New%20Inquiry">test@sweetbaby.com</StyledLink>
+                                <StyledLink className="text-body landscape-mobile-text" href="mailto:test@yoursite.com?subject=New%20Inquiry" target="_blank" rel="noopener noreferrer">test@sweetbaby.com</StyledLink>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <StyledDiv className="d-flex justify-content-center">
+                <iframe className="mt-2" title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3341.5366132517656!2d-96.79789748480917!3d33.12126428086946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3c55b2ed9b15%3A0x4c8c7de0284c84df!2s9706%20Adolphus%20Dr%2C%20Frisco%2C%20TX%2075035!5e0!3m2!1sen!2sus!4v1607115440655!5m2!1sen!2sus" frameBorder="0" allowFullScreen></iframe>
+            </StyledDiv>
         </div>
     );
 }
@@ -68,6 +70,20 @@ const StyledImg = styled.img`
     }
 `;
 
+const StyledDiv = styled.div`
+    display: none !important;
+    
+    @media (max-width: 414px) and (orientation: portrait) {
+        display: block !important;
+    }
+`;
+
+const StyledIframe = styled.iframe`
+    @media (max-width: 414px) and (orientation: portrait) {
+        display: none;
+    }
+`;
+
 const SharedStyle = css`
     @media (max-width: 812px) and (orientation: landscape) {
         font-size: 0.8125rem;
@@ -77,7 +93,7 @@ const SharedStyle = css`
         font-size: 0.75rem;
     }
 
-    @media (min-width: 415px) and (max-height: 1024px) {
+    @media (min-width: 415px) and (max-height: 1024px) and (orientation: portrait) {
         font-size: 0.75rem;
     }
 `;

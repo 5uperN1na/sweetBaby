@@ -149,26 +149,26 @@ const StyledUl = styled.ul`
 
 const StyledLi = styled.li`
     font-family: 'Beth Ellen', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
 
     @media (min-width: 768px) and (max-width: 1023px) {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     @media (max-width: 1024px) and (orientation: portrait) {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     @media (max-width: 767px) {
-        font-size: 11px;
+        font-size: 0.6875rem;
     }
 
     @media (min-width: 668px) and (max-width: 812px) and (orientation: landscape) {
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 
     @media (max-width: 667px) and (orientation: landscape) {
-        font-size: 10px;
+        font-size: 0.625rem;
     }
 `;
 
