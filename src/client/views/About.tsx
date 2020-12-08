@@ -194,6 +194,8 @@ const TextContainer = styled.section`
     @media (min-width: 667px) and (max-width: 812px) and (orientation: landscape) {
         top: 95%;
     }
+
+    padding-right: 18px;
 `;
 
 export default About;
