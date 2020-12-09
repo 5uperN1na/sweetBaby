@@ -1,9 +1,12 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import NavBar from '../components/navigation/NavComponent';
 import TestimonialCarousel from '../components/testimonials/TestimonialCarousel';
+import CovidComponent from '../components/covid/CovidComponent';
 
 const Home: React.FC<IHomeProps> = () => {
+
     return (
         <Background>
             <NavBar />
@@ -15,8 +18,11 @@ const Home: React.FC<IHomeProps> = () => {
             </HeroDiv>
             <BottomDiv>
                 <TestimonialCarousel />
+                <CovidComponent />
             </BottomDiv>
+           
         </Background>
+      
     );
 }
 
@@ -72,6 +78,13 @@ const BottomDiv = styled.section`
         top: 100%;
     }
 `;
+
+
+
+
+
+
+
 
 export interface IHomeProps { }
 
