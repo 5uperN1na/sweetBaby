@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import NavBar from '../components/navigation/NavComponent';
 import GoogleFontLoader from 'react-google-font-loader';
+import ScheduleComponent from '../components/schedule/ScheduleComponent';
 
 
 const About = () => {
@@ -71,6 +72,7 @@ const About = () => {
                             </p>
                         </article>
                     </div>
+                    <ScheduleComponent />
                 </TextContainer>
             </main>
         </Background>

@@ -10,6 +10,7 @@ const Home: React.FC<IHomeProps> = () => {
     return (
         <Background>
             <NavBar />
+          
             <HeroDiv className="d-flex justify-content-center">
                 <StyledImg
                     className="my-3"
