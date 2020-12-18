@@ -1,17 +1,22 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import NavBar from '../components/navigation/NavComponent';
 import TestimonialCarousel from '../components/testimonials/TestimonialCarousel';
-import CovidComponent from '../components/covid/CovidComponent';
-
+import CovidOverlay from '../components/covid/CovidOverlay';
+ 
+ 
 const Home: React.FC<IHomeProps> = () => {
 
     return (
+
         <Background>
+
             <NavBar />
-          
-            <HeroDiv className="d-flex justify-content-center">
+            <CovidOverlay />
+
+             <HeroDiv className="d-flex justify-content-center">
+
                 <StyledImg
                     className="my-3"
                     src="/images/sweetbaby.jpg"
@@ -19,11 +24,12 @@ const Home: React.FC<IHomeProps> = () => {
             </HeroDiv>
             <BottomDiv>
                 <TestimonialCarousel />
-                <CovidComponent />
-            </BottomDiv>
-           
+
+            </BottomDiv> 
         </Background>
-      
+
+
+
     );
 }
 
@@ -80,6 +86,7 @@ const BottomDiv = styled.section`
     }
 `;
 
+ 
 
 
 
