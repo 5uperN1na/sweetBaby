@@ -14,6 +14,7 @@ const Home: React.FC<IHomeProps> = () => {
 
             <NavBar />
             <CovidOverlay />
+            
 
              <HeroDiv className="d-flex justify-content-center">
 

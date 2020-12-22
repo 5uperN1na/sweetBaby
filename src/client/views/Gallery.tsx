@@ -60,7 +60,7 @@ const StyledMain = styled.main`
 
 const Background = styled.div`
     background-color: #f5dcdb;
-    height: 55%;
+    height: 50%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
