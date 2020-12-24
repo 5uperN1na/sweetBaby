@@ -8,26 +8,19 @@ const Schedule: React.FC<IScheduleProps> = (props) => {
     return (
 
         <StyledAlert>
-            <GoogleFontLoader
-                fonts={[
+            <div className="row d-flex justify-content-center align-items-center">
 
-                    {
-                        font: 'Long Cang',
+                <div className="alert  alert-dismissible">
 
-                    },
-                ]}
+                    <StyledImg>
+                        <a href="/schedule2" className="alert-link">Sweet Baby Care Schedule</a>
 
-            />
-            <div className="alert  alert-dismissible">
+                        <img src="/images/calendar.png" alt="abc icon" width="2%" />
 
-                <StyledImg>
-                    <a href="/schedule" className="alert-link">Sweet Baby Care Schedule</a>
-
-                    <img src="/images/calendar.png" alt="abc icon" width="2%" />
-
-                </StyledImg>
+                    </StyledImg>
 
 
+                </div>
             </div>
 
 
