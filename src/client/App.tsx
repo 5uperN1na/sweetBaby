@@ -6,7 +6,7 @@ import Testimonials from './views/Testimonials';
 import Contact from './views/Contact';
 import Pastel from './views/Pastel';
 import GalleryView from './views/Gallery';
-import Schedule from './views/Schedule';
+import Schedule2 from './views/Schedule2';
 import GalleryDetails from './components/gallery/GalleryDetails';
 // import GalleryDetails from './components/gallery/GalleryDetails';
 
@@ -38,8 +38,8 @@ const App = () => {
 					<GalleryView />
 				</Route>
 
-				<Route exact path="/schedule">
-					<Schedule />
+				<Route exact path="/schedule2">
+					<Schedule2 />
 				</Route>
 				<Route path="*" component={Pastel} />
 			</Switch>
