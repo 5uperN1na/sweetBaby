@@ -8,7 +8,9 @@ import ScheduleComponent from '../components/schedule/ScheduleComponent';
 const About = () => {
     return (
         <Background>
+            
             <NavBar />
+          
             <main className="container-fluid">
                 <GoogleFontLoader
                     fonts={[
@@ -26,7 +28,9 @@ const About = () => {
                 <header className="d-flex justify-content-center">
                     <StyledTitle className="m-5 text-muted">About Us</StyledTitle>
                 </header>
+             
                 <CenterDiv>
+            
                     <OvalDiv className="d-flex justify-content-center align-items-center">
                         <StyledUl className="m-2">
                             <StyledLi>
@@ -75,8 +79,16 @@ const About = () => {
                     <ScheduleComponent />
                 </TextContainer>
             </main>
+
+           
+            
         </Background>
+
+
+
     );
+
+   
 }
 
 const Background = styled.div`
