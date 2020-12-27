@@ -46,39 +46,46 @@ const Schedule2: React.FC<ISchedule2Props> = (props) => {
                                 <div className="redline"></div>
                                 <div className="blueline"></div>
                                 <div className="card_row">
-                                    <span className="text"><strong>6:30-8:00   </strong>Arrival</span>
+                                    <span className="text"><strong>6:30-8 </strong></span>
+                                    <span className="text">Arrival</span>
                                 </div>
 
                                 <div className="blueline"></div>
                                 <div className="card_row">
-                                    <span className="text"><strong>8:00-8:30   </strong>Breakfast</span>
+                                    <span className="text"><strong>8-8:30 </strong></span>
+                                    <span className="text">Breakfast</span>
                                 </div>
 
                                 <div className="blueline"></div>
                                 <div className="card_row">
-                                    <span className="text"><strong>8:30-9:00   </strong>Potty Break </span>
-                                </div>
-
-
-                                <div className="blueline"></div>
-                                <div className="card_row">
-                                    <span className="text"><strong>9:00-9:30   </strong>Playtime </span>
+                                    <span className="text"><strong>8:30-9</strong></span>
+                                    <span className="text">Potty Break</span>
                                 </div>
 
 
                                 <div className="blueline"></div>
                                 <div className="card_row">
-                                    <span className="text"><strong>9:30-10:00   </strong>Morning Snack </span>
+                                    <span className="text"><strong>9-9:30</strong></span>
+                                    <span className="text">Playtime</span>
+                                </div>
+
+
+                                <div className="blueline"></div>
+                                <div className="card_row">
+                                    <span className="text"><strong>9:30-10</strong></span>
+                                    <span className="text">Snack</span>
                                 </div>
 
                                 <div className="blueline"></div>
                                 <div className="card_row">
-                                    <span className="text"><strong>10:00-11:00   </strong>Outside Play </span>
+                                    <span className="text"><strong>10-11</strong></span>
+                                    <span className="text">Playtime</span>
                                 </div>
 
                                 <div className="blueline"></div>
                                 <div className="card_row">
-                                    <span className="text"><strong>11:00-11:45   </strong>Crafts</span>
+                                    <span className="text"><strong>11-11:45</strong></span>
+                                    <span className="text">Crafts</span>
                                 </div>
                              
 
@@ -98,57 +105,50 @@ const Schedule2: React.FC<ISchedule2Props> = (props) => {
 
                                 <div className="blueline"></div>
                                 <div className="card_row">
-                                    <span className="text"><strong>11:45-12:00   </strong> Potty Break</span>
+                                    <span className="text"><strong>11:45-12    </strong></span>
+                                    <span className="text">Potty Break</span>
+                                
                                 </div>
 
                                 <div className="blueline"></div>
                                 <div className="card_row">
-                                    <span className="text"><strong>12:00-12:30   </strong>Lunch</span>
+                                    <span className="text"><strong>12-12:30</strong></span>
+                                    <span className="text">Lunch</span>
                                 </div>
 
 
                                 <div className="blueline"></div>
                                 <div className="card_row">
-                                    <span className="text"><strong>12:30-3:30   </strong>Nap</span>
+                                    <span className="text"><strong>12:30-3:30</strong></span>
+                                    <span className="text">Nap</span>
                                 </div>
 
                                 <div className="blueline"></div>
                                 <div className="card_row">
-                                    <span className="text"><strong>3:30-4:00   </strong>Potty Break</span>
+                                    <span className="text"><strong>3:30-4</strong></span>
+                                    <span className="text">Potty Break</span>
                                 </div>
 
                                 <div className="blueline"></div>
                                 <div className="card_row">
-                                    <span className="text"><strong>4:00-4:30   </strong>Snack</span>
+                                    <span className="text"><strong>4-4:30</strong></span>
+                                    <span className="text">Snack</span>
                                 </div>
 
                                 <div className="blueline"></div>
                                 <div className="card_row">
-                                    <span className="text"><strong>4:30-5:30   </strong>Playtime</span>
+                                    <span className="text"><strong>4:30-5:30</strong></span>
+                                    <span className="text">Playtime</span>
                                 </div>
 
                                 <div className="blueline"></div>
                                 <div className="card_row">
-                                    <span className="text"><strong>5:30-6:00   </strong>Clean Up</span>
+                                    <span className="text"><strong>5:30-6</strong></span>
+                                    <span className="text">Clean-up</span>
                                 </div>
 
                                 <div className="blueline"></div>
                             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                             {/* 
@@ -181,19 +181,32 @@ const Layout = styled.div`
     font-size: 40px;
 }
 
+span  {
+    display: inline-block;
+    margin: 0px 7px;       
+}
+
 .card {
     background: #fefefa;
     box-shadow: 6px 6px 5px gray;
     width: 450px;
     // height: 275px;
-    padding: 5px;
-    margin: 15px;
+    padding: 12px;
+    margin: 10px;
+   transition: all .5s ease; 
+  }
+
+  .card:hover {
+    transform: translate3D(0,-1px,0) scale(1.03);
+    transition: all .5s ease; 
   }
 
   .card_title {
     height: 60px;
     // width: 100%;
     // position: relative;
+    text-align: center;
+   
   }
 
   .redline {
@@ -217,21 +230,26 @@ const Layout = styled.div`
     height: 20px;
     // width: 100%;
     // position: relative;
+  
   }
 
   .text_title {
-  
     font-size: 2em;
     bottom: 0;
     // position: absolute;
     font-weight: bold;
+    
   }
   .text {
   
-    font-size: 1em;
+    font-size: 19px;
     bottom: 0;
     // position: absolute;
+    
   }
+
+   
+
 
 
 

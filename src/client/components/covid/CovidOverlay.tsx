@@ -113,8 +113,9 @@ opacity: 1;
 const Layout = styled.div`
 
 .button {
-  background-color: #ff1919;  
-  border: #ff7a7a;
+  background-color: #ff726f;  
+  border: #ff726f;  
+  border-radius: 4px;
   color: white;
   padding: 10px 24px;
   text-align: center;
@@ -130,7 +131,7 @@ const Layout = styled.div`
 }
 
 .button:active{
-  background:#ff7a7a; 
+  background: #ff726f;  
 }
 
 

@@ -11,23 +11,10 @@ const Schedule: React.FC<IScheduleProps> = (props) => {
             <div className="row d-flex justify-content-center align-items-center">
 
                 <div className="alert  alert-dismissible">
-
-                    <StyledImg>
-                        <a href="/schedule2" className="alert-link">Sweet Baby Care Schedule</a>
-
-                        <img src="/images/calendar.png" alt="abc icon" width="2%" />
-
-                    </StyledImg>
-
-
+ 
+                        <a href="/schedule2" className="alert-link">Daily Schedule</a>
                 </div>
             </div>
-
-
-
-
-
-
 
         </StyledAlert>
 
@@ -41,37 +28,25 @@ const StyledAlert = styled.div`
 .alert{
     background-color: #ffe98e;
     color: gray;
-    font-family: 'Long Cang';
     text-align: center;
-    font-size: 25px;
-  
-    
-
+    font-size: 15px;
+    padding: 10px 24px;
 }
 
 a {
     background-color: #ffe98e;
     color: gray;
-    font-family: 'Long Cang';
     text-align: center;
-    font-size: 25px;
+    font-size: 15px;
+    padding: 10px 24px;
 }
   
  
 `;
 
 
-const StyledImg = styled.image`
 
-img{
-    padding-left: 5px;
 
-}
- 
- 
-
- 
-`;
 
 
 
