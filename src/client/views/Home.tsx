@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import NavBar from '../components/navigation/NavComponent';
 import TestimonialCarousel from '../components/testimonials/TestimonialCarousel';
-import CovidOverlay from '../components/covid/CovidOverlay';
+import CovidOverlay2 from '../components/covid/CovidOverlay2';
  
  
 const Home: React.FC<IHomeProps> = () => {
@@ -13,7 +13,7 @@ const Home: React.FC<IHomeProps> = () => {
         <Background>
 
             <NavBar />
-            <CovidOverlay />
+            <CovidOverlay2 />
             
 
              <HeroDiv className="d-flex justify-content-center">

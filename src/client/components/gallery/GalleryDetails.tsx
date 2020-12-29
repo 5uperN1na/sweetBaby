@@ -8,7 +8,8 @@ import NavBar from '../navigation/NavComponent';
 // import { IGallery } from '../../utils/interfaces';
 import { useParams } from 'react-router-dom'
 import { galleries } from "../../utils/galleris";
-import Pastel from '../../views/Pastel';
+// import Pastel from '../../views/Pastel';
+import PageNotFound from "../../views/PageNotFound";
 
 
 
@@ -30,7 +31,7 @@ const GalleryDetails: React.FC<GalleryDetailsProps> = () => {
     if (galleryId > galleries.length || isNaN(galleryId)) {
         return (
             <>
-                <Pastel />
+                <PageNotFound />
             </>
         )
     } else {

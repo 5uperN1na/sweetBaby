@@ -187,8 +187,9 @@ span  {
 }
 
 .card {
-    background: #fefefa;
+    background: #f8fad7;
     box-shadow: 6px 6px 5px gray;
+    border-radius: 5px;
     width: 450px;
     // height: 275px;
     padding: 12px;
@@ -264,7 +265,7 @@ const StyledMain = styled.main`
 `;
 
 const Background = styled.div`
-    background-color: #d7eecc;
+    background-color: #EFFFBF;
     height: 55%;
     background-attachment: fixed;
     background-position: center;
