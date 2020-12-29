@@ -95,7 +95,7 @@ const ContentDiv = styled.div`
 `;
 
 const Background = styled.div`
-background-color: #b2d0f1;
+background-color: #BFFFF5;
 height: 40%;
 background-attachment: fixed;
 background-position: center;

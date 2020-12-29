@@ -7,6 +7,7 @@ import Contact from './views/Contact';
 import Pastel from './views/Pastel';
 import GalleryView from './views/Gallery';
 import Schedule2 from './views/Schedule2';
+import PageNotFound from './views/PageNotFound'
 import GalleryDetails from './components/gallery/GalleryDetails';
 // import GalleryDetails from './components/gallery/GalleryDetails';
 
@@ -41,7 +42,12 @@ const App = () => {
 				<Route exact path="/schedule2">
 					<Schedule2 />
 				</Route>
-				<Route path="*" component={Pastel} />
+				<Route path="*" component={PageNotFound} />
+
+				<Route exact path="/pagenotfound">
+					<PageNotFound />
+				</Route>
+
 			</Switch>
 		</BrowserRouter>
 	)
