@@ -21,11 +21,12 @@ const CovidOverlay2: React.FC<ICovidOverlay2Props> = (props) => {
 
 
             <div id="covidOverlay" className="overlay">
-                <a className="closebtn" onClick={close}>&times;</a>
+                
                
                     <div className="row  justify-content-center align-items-center">
                         <div className="col-md-8">
                             <div className="card">
+                            <a className="closebtn" onClick={close}>&times;</a>
                                 <div className="overlay-content">
 
                                     <h5 className="text-center">Sweet Baby Care's Commitment to Health and Safety.</h5>
@@ -56,26 +57,6 @@ const CovidOverlay2: React.FC<ICovidOverlay2Props> = (props) => {
 
     );
 }
-
-
-
-
-
-
-// const Background = styled.div`
-// background-color: #BFFFF5;
-// height: 40%;
-// background-attachment: fixed;
-// background-position: center;
-// background-repeat: no-repeat;
-// background-size: cover;
-// width: 100%;
-// opacity: 1;
-
-// @media (min-width: 360px) and (max-width: 812px) and (orientation: landscape) {
-//   height: 60%;
-// }
-// `;
 
 
 const Layout = styled.div`
@@ -118,7 +99,7 @@ const Layout = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 1;
+  opacity: 0.8;
   background-color: white;
   // overflow-x: hidden; 
 
@@ -128,6 +109,8 @@ const Layout = styled.div`
   width: 100%;
   height: 100%;
   color: grey;
+  font-weight: bold;
+
   }
 
 .overlay-content h5 {
@@ -148,9 +131,12 @@ const Layout = styled.div`
   top: 10px;
   right: 55px;
   font-size: 40px;
-  color: grey;
+  color: black;
   text-decoration: none;
   cursor: pointer;
+  opacity: 0.5;
+  transition: 0.1s;
+   
   }
   
   @media screen and (max-height: 450px) {
@@ -159,14 +145,19 @@ const Layout = styled.div`
   font-size: 40px;
   top: 28px;
   right: 35px;
+
     }
   }
 
+  .overlay .closebtn:hover {
+    opacity: 1;
+   
+    }
+
 
   .card {
-    background: #fefefa;
+    background: white;
     box-shadow: 6px 6px 5px gray;
- 
     padding: 30px;
     margin-top: 12%;
  
