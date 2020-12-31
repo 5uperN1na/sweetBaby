@@ -61,8 +61,12 @@ const About = () => {
                     </OvalDiv>
                 </CenterDiv>
                 <TextContainer>
+                <ScheduleComponent />
                     <div className="row justify-content-center">
+                   
                         <article className="col-md-5">
+
+                   
                             <p className="text-justify">
                             Sweet Baby Care is a home-based childcare program specializing in infants and toddlers. Glenda Guilarte is a licensed family childcare provider in Frisco, TX.  Glenda cares for infants (6 weeks) up to 4 years old.  The infant program works with the parents to customize a routine based on each infant's need.  The focus of the toddlers’ program is to maximize each child’s potential through learning and play. The hours of operations are 6:30 a.m. to 6:00 p.m. Monday through Friday.  Sweet Baby Care is registered by the state of Texas childcare licensing division and all the staff is CPR certified.  It is also a pet friendly environment.    
 
@@ -76,7 +80,7 @@ const About = () => {
                             </p>
                         </article>
                     </div>
-                    <ScheduleComponent />
+                  
                 </TextContainer>
             </main>
 

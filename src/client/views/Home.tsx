@@ -3,20 +3,20 @@ import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import NavBar from '../components/navigation/NavComponent';
 import TestimonialCarousel from '../components/testimonials/TestimonialCarousel';
-import CovidOverlay2 from '../components/covid/CovidOverlay2';
- 
- 
+import CovidButton from '../components/covid/CovidButton';
+import CovidModal2 from '../components/covid/CovidModal2';
+
+
 const Home: React.FC<IHomeProps> = () => {
 
     return (
-
+    
         <Background>
-
+        
             <NavBar />
-            <CovidOverlay2 />
-            
-
-             <HeroDiv className="d-flex justify-content-center">
+            <CovidModal2 />
+           
+            <HeroDiv className="d-flex justify-content-center">
 
                 <StyledImg
                     className="my-3"
@@ -26,7 +26,7 @@ const Home: React.FC<IHomeProps> = () => {
             <BottomDiv>
                 <TestimonialCarousel />
 
-            </BottomDiv> 
+            </BottomDiv>
         </Background>
 
 
@@ -87,7 +87,7 @@ const BottomDiv = styled.section`
     }
 `;
 
- 
+
 
 
 
