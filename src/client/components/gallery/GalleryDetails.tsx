@@ -8,10 +8,9 @@ import NavBar from '../navigation/NavComponent';
 // import { IGallery } from '../../utils/interfaces';
 import { useParams } from 'react-router-dom'
 import { galleries } from "../../utils/galleris";
+
 // import Pastel from '../../views/Pastel';
 import PageNotFound from "../../views/PageNotFound";
-
-
 
 const GalleryDetails: React.FC<GalleryDetailsProps> = () => {
     const { id } = useParams<any>()
@@ -56,21 +55,41 @@ const GalleryDetails: React.FC<GalleryDetailsProps> = () => {
                         <div className="row d-flex justify-content-center align-items-center">
                             <StyledTitle className="my-5 text-muted">{galleries[galleryId].name}</StyledTitle>
                         </div>
+
+
                         <Gallery photos={galleries[galleryId].photos} onClick={openLightbox} />
                         <ModalGateway>
+
                             {viewerIsOpen ? (
+
+
                                 <Modal onClose={closeLightbox} >
-                                    <ImageViewer>
+
+                                 
                                         <Carousel
+
+
                                             currentIndex={currentImage}
                                             views={galleries[`${galleryId}`].photos.map<any, any[]>((gallery: any) => ({
                                                 ...gallery,
                                             }))}
+
+
                                         />
-                                    </ImageViewer>
+                                  
+
+
+
                                 </Modal>
+
+
+
+
                             ) : null}
+
                         </ModalGateway>
+
+
                     </StyledMain>
                 </Background>
             </div >
@@ -114,14 +133,14 @@ const Background = styled.div`
 `;
 
 
-const ImageViewer = styled.section`
-width: 500px;
-object-fit: none;
-object-position: 10px 10%;
-`;
-
 
  
+
+
+
+
+
+
 
 export interface GalleryDetailsProps { }
 

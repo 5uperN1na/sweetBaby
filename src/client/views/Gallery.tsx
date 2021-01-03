@@ -5,6 +5,7 @@ import GoogleFontLoader from "react-google-font-loader";
 import NavBar from "../components/navigation/NavComponent";
 import GalleryCard from "../components/gallery/GalleryCard";
 import { galleries } from '../utils/galleris';
+ 
 
 const Gallery: React.FC<IGalleryProps> = () => {
     return (

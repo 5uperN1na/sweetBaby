@@ -8,7 +8,7 @@ import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
 const TestimonialsArray = [
     {
         id: 1,
-        name: "Stephanie K.",
+        name: "Steph K.",
         quote: "We would highly recommend to any new parent who is looking for a home, childcare option.",
         description: "We decided on Sweet Baby Care because we wanted our baby to be in a home environment—not just a large center with a bunch of kids in one classroom.  The home is in a quiet, peaceful neighborhood in Frisco, so it is easy access to our jobs and daily commute.  Ms. Glenda is so sweet and giving to our daughter.  We would highly recommend to any new parent who is looking for a home, childcare option.",
     },
