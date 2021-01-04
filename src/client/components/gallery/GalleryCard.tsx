@@ -2,7 +2,8 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { IGallery } from '../../utils/interfaces';
 import { Link } from 'react-router-dom';
-import { galleries } from '../../utils/galleris';
+// import { galleries } from '../../utils/galleris';
+import { galleries } from '../../utils/g';
 import styled from 'styled-components';
 import GoogleFontLoader from 'react-google-font-loader';
 

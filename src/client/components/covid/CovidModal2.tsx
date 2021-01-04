@@ -50,7 +50,7 @@ const CovidModal2: React.FC<ICovidModal2Props> = (props) => {
 const Close = styled.div`
 position: absolute;
 top: 45px;
-right: 50px;
+right: 75px;
 
 
 @media only screen and (max-width: 414px) {
@@ -104,7 +104,7 @@ const Layout = styled.div`
   top: 0;
   width: 100%;  
   height: 200%;  
-  overflow: auto;  
+  // overflow: auto;  
 //   background-color: rgb(0,0,0);  
 //   background-color: rgba(0,0,0,0.4); 
 
@@ -135,7 +135,6 @@ const Layout = styled.div`
 
 
 .close {
-
   color: #000;
   font-size: 50px;
   font-weight: bold;
@@ -158,6 +157,15 @@ const Layout = styled.div`
  
 }
 
+@media only screen and (max-width: 414px) {
+  .modal-content{
+    font-size: 14px;
+  
+  }
+
+
+
+}
 
 
 
