@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import NavBar from '../components/navigation/NavComponent';
 import TestimonialCarousel from '../components/testimonials/TestimonialCarousel';
-import CovidButton from '../components/covid/CovidButton';
+// import CovidButton from '../components/covid/CovidButton';
 import CovidModal2 from '../components/covid/CovidModal2';
 
 

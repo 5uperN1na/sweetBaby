@@ -107,6 +107,11 @@ const Background = styled.div`
     @media (min-width: 667px) and (max-width: 812px) and (orientation: landscape) {
         height: 60%;
     }
+
+    @media (max-width: 320px) {
+        height: 40%;
+    }
+
 `;
 
 const StyledTitle = styled.h1`
@@ -118,6 +123,14 @@ const StyledTitle = styled.h1`
     @media (max-width: 812px) and (orientation: landscape) {
         display: none;
     }
+
+    @media (max-width: 320px) {
+        font-size: 33px;
+        top: 18%;
+         
+        
+    }
+
 `;
 
 const CenterDiv = styled.section`
@@ -127,9 +140,17 @@ const CenterDiv = styled.section`
     left: 20%;
     right: 20%;
 
+
     @media (max-width: 470px) {
         left: 5%;
         right: 5%;
+    }
+
+   
+
+    @media (max-width: 320px) {
+        left: 1%;
+        right: 1%;
     }
 
     @media (min-width: 667px) and (max-width: 812px) and (orientation: landscape) {
@@ -154,6 +175,9 @@ const OvalDiv = styled.div`
     @media (min-width: 667px) and (max-width: 812px) and (orientation: landscape) {
         height: 50vh;
     }
+
+    
+
 `;
 
 const StyledUl = styled.ul`
@@ -188,6 +212,12 @@ const StyledLi = styled.li`
     @media (max-width: 667px) and (orientation: landscape) {
         font-size: 0.625rem;
     }
+
+    @media (max-width: 320px)   {
+        font-size: 0.575rem;
+    }
+
+
 `;
 
 const StyledImg = styled.img`
@@ -202,6 +232,12 @@ const StyledImg = styled.img`
     @media (max-width: 667px) and (orientation: landscape) {
         width: 16px;
         height: 16px;
+    }
+
+
+    @media (max-width: 320px)   {
+        width: 14px;
+        height: 14px;
     }
 `;
 

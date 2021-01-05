@@ -71,6 +71,7 @@ const StyledImg = styled.img`
 `;
 
 const StyledDiv = styled.div`
+    padding-bottom: 25px;
     display: none !important;
     
     @media (max-width: 414px) and (orientation: portrait) {

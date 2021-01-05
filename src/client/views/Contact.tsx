@@ -95,9 +95,9 @@ const Background = styled.div `
     background-color: #f5dcdb;
     height: 50%;
 
-    @media (max-width: 812px) {
-        height: 140%;
-    }
+    // @media (max-width: 812px) {
+    //     height: 140%;
+    // }
 `;
 
 export interface IContactProps {}

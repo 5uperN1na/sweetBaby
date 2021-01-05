@@ -4,63 +4,56 @@ import styled from "styled-components";
 
 const CovidModal2: React.FC<ICovidModal2Props> = (props) => {
 
-    function open() {
-        document.getElementById("myModal").style.display = "block";
-    }
+  function open() {
+    document.getElementById("myModal").style.display = "block";
+  }
 
-    function close() {
-        document.getElementById("myModal").style.display = "none";
-    }
+  function close() {
+    document.getElementById("myModal").style.display = "none";
+  }
 
-    return (
-        <Layout>
+  return (
+    <Layout>
 
-            <div className="d-flex justify-content-center align-items-center my-5 p-5 ">
-                <button type="button" className="button" onClick={open}>Covid-19 Precautions</button>
-            </div>
-            <div className="row  justify-content-center align-items-center">
-
-
-                <div id="myModal" className="modal">
+      <div className="d-flex justify-content-center align-items-center my-5 p-5 ">
+        <button type="button" className="button" onClick={open}>Covid-19 Precautions</button>
+      </div>
+      <div className="row  justify-content-center align-items-center">
 
 
-                    <div className="modal-content">
+        <div id="myModal" className="modal">
 
-                        <Close>
-                            <a className="close" onClick={close}>&times;</a>
-                        </Close>
 
-                        <h5 className="text-center my-4">Sweet Baby Care's Commitment to Health and Safety</h5>
-                        <p className="text-justify my-3">
-                            At Sweet Baby Care, our priority is the health and safety of our kiddos.  COVID-19 has impacted families and communities all around us; we understand how difficult this past year has been.
-                            Just know that we are taking those extra precautions so you and your family feel good about the daycare choice that you have made.  While following Federal and State guidelines, here are some additional steps we are taking:  We continue to keep the teacher-to-child ratio low.  We are incorporating extra handwashing breaks for the toddlers.  We have enhanced cleaning procedures before and after child arrival.  We are doing regular temperature checks and require facial masks inside the house.  To practice social distancing, we are asking that parents stay at the door at drop-off and pick-up time.
+          <div className="modal-content">
+
+            <Close>
+              <a className="close" onClick={close}>&times;</a>
+            </Close>
+
+            <h5 className="text-center my-4">Sweet Baby Care's Commitment to Health and Safety</h5>
+            <p className="text-justify my-3">
+              At Sweet Baby Care, our priority is the health and safety of our kiddos.  COVID-19 has impacted families and communities all around us; we understand how difficult this past year has been.
+              Just know that we are taking those extra precautions so you and your family feel good about the daycare choice that you have made.  While following Federal and State guidelines, here are some additional steps we are taking:  We continue to keep the teacher-to-child ratio low.  We are incorporating extra handwashing breaks for the toddlers.  We have enhanced cleaning procedures before and after child arrival.  We are doing regular temperature checks and require facial masks inside the house.  To practice social distancing, we are asking that parents stay at the door at drop-off and pick-up time.
                             We are grateful for all of the Sweet Baby Care families along with a wonderful community that supports us.  We will get through this together! To learn more about the CDC Guidelines for child care centers, please read more <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/schools-childcare/guidance-for-childcare.html"> here.</a>
-                        </p>
-                    </div>
-                </div>
+            </p>
+          </div>
+        </div>
 
-            </div>
+      </div>
 
-        </Layout>
+    </Layout>
 
-    );
+  );
 }
 
 
 const Close = styled.div`
-position: absolute;
+// position: absolute;
 top: 45px;
 right: 75px;
 
 
-@media only screen and (max-width: 414px) {
-    position: absolute;
-    top: 15px;
-    right: 50px;
-    
-  
- 
-}
+
 
 
 `;
@@ -157,25 +150,14 @@ const Layout = styled.div`
  
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 375px) {
   .modal-content{
-    font-size: 14px;
+    font-size: 12px;
   
   }
 
-
-
 }
 
-
-
-
- 
-    
-
-    
-
-  
 
 `;
 
