@@ -26,29 +26,34 @@ const TestimonialsComp: React.FC<ITestimonialsCompProps> = (props) => {
                 subsets={['cyrillic-ext', 'greek']}
             />
             <Fade bottom>
-                <hr className="hr-style mt-5" />
-                <div className="">
-                    <div className="container">
-                        {/* <div className="text-center mb-3">"{props.testimonial.quote}"</div> */}
-                        <div className="row d-flex justify-content-center align-items-center">
-                            <div className="col-md-1 text-center quote-style"><FaQuoteLeft /></div>
-                            <div className="col-md-8">
-                                <p className="text-justify mt-3 font-weight-light">{props.testimonial.description}</p>
-                                <div className="text-right name-text">- {props.testimonial.name}</div>
+                
+                    <hr className="hr-style mt-5" />
+                    
+                    <div className="">
+                        <div className="container">
+                            {/* <div className="text-center mb-3">"{props.testimonial.quote}"</div> */}
+                            <div className="row d-flex justify-content-center align-items-center">
+                                <div className="col-md-1 text-center quote-style"><FaQuoteLeft /></div>
+                                <div className="col-md-8">
+                                    <p className="text-justify mt-3 font-weight-light">{props.testimonial.description}</p>
+                                    <div className="text-right name-text">- {props.testimonial.name}</div>
+                                </div>
+                                <div className="col-md-1 text-center quote-style"><FaQuoteRight /></div>
                             </div>
-                            <div className="col-md-1 text-center quote-style"><FaQuoteRight /></div>
-                        </div>
 
+                        </div>
                     </div>
-                </div>
-                <hr className="hr-style mb-5" />
+                    <hr className="hr-style mb-5" />
+                
             </Fade>
         </Layout>
     )
 }
 
-const Layout = styled.div`
 
+
+
+const Layout = styled.div`
 .name-text {
     font-family: 'Homemade Apple', sans-serif;
 
@@ -63,6 +68,7 @@ const Layout = styled.div`
     margin: 30px -20px 20px;
     border: 0;
     border-top: 1px solid #c9c7c7;
+
 }
 
 .hero-text {
@@ -71,9 +77,11 @@ const Layout = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+
   }
 
-`
+`;
 
 export interface ITestimonialsCompProps {
     testimonial: ITestimonial;

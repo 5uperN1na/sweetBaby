@@ -74,15 +74,15 @@ const StyledDiv = styled.div`
     padding-bottom: 25px;
     display: none !important;
     
-    @media (max-width: 414px) and (orientation: portrait) {
-        display: block !important;
-    }
+    // @media (max-width: 414px) and (orientation: portrait) {
+    //     display: block !important;
+    // }
 `;
 
 const StyledIframe = styled.iframe`
-    @media (max-width: 414px) and (orientation: portrait) {
-        display: none;
-    }
+    // @media (max-width: 414px) and (orientation: portrait) {
+    //     display: none;
+    // }
 `;
 
 const SharedStyle = css`

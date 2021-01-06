@@ -90,12 +90,84 @@ const StyledMain = styled.main`
 
 const Background = styled.div`
     background-color: #d7eecc;
-    height: 55%;
+    height: 50%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+ 
+    @media screen and (max-width: 280px) {
+        height: 50%;
+    }
+    
+    
+    @media screen and (min-width: 281px) and (max-width: 320px) {
+        height: 60%;
+    }
+    
+    
+    @media screen and (min-width: 321px) and (max-width: 360px) {
+        height: 52%;
+    }
+    
+    @media screen and (min-width: 375px) and (max-height: 812px) {
+        height: 43%;
+    }
+
+    @media screen and (min-width: 375px) and (max-height: 667px) {
+        height: 52%;
+    }
+
+    @media screen and (min-width: 411px) and (max-height: 823px) {
+        height: 42%;
+    }
+
+
+    @media screen and (min-width: 411px) and (max-height: 731px) {
+        height: 48%;
+    }
+
+
+    @media screen and (min-width: 414px) and (max-width: 539px) {
+        height: 46%;
+    }
+    
+    @media screen and (min-width: 549px) and (max-width: 767px) {
+        height: 50%;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 839px) {
+        height: 34%;
+    }
+
+    @media screen and (min-width: 840px) and (max-height: 570px) {
+        height: 58%;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1366px) {
+        height: 25%;
+    }
+
+    @media screen and (min-width: 1366px) and (max-width: 1920px) {
+        height: 51%;
+    }
+    
+    
+
+ 
+
+    
+
+    
+
+
+ 
+
+
+
+
+
 `;
 
 export interface ITestimonialsProps { }

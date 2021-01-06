@@ -74,8 +74,8 @@ const CardContainer = styled.section`
         top: 59%;
     } 
 
-    @media (min-width: 270px) and (max-width: 540px) {
-        top: 100%;
+    @media (min-width: 360px) and (max-width: 414px) {
+        top: 88%;
     }
 
     @media (max-width: 812px) and (orientation: landscape) {
