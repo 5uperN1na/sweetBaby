@@ -46,6 +46,8 @@ const Background = styled.div`
     @media (max-width: 812px) and (orientation: landscape) {
         height: 60%;
     }
+
+     
 `;
 
 const StyledImg = styled.img`
@@ -57,6 +59,8 @@ const StyledImg = styled.img`
     @media (max-width: 812px) and (orientation: landscape) {
         width: 20rem;
     }
+
+    
 `;
 
 const HeroDiv = styled.section`
@@ -85,6 +89,8 @@ const BottomDiv = styled.section`
     @media (max-width: 812px) and (orientation: landscape) {
         top: 100%;
     }
+
+    
 `;
 
 

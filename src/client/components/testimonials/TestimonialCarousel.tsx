@@ -80,7 +80,7 @@ const TestimonialCarousel: React.FC<ITestimonialCarouselProps> = (props) => {
                             </div>
                             <div className="text-center">
                                 <span
-                                    className="quote-text px-5"
+                                    className="quote-text px-3"
                                     style={{ fontFamily: "'Homemade Apple', sans-serif", color:"#ff7e9a" }}>- {item.name}
                                 </span>
                             </div>
@@ -107,12 +107,17 @@ const Layout = styled.div`
     position: relative;
     animation: mymove 5s infinite;
     color: gray;
+
+   
 }
 
 .quote-marks {
     font-size: 2rem;
     opacity: 0.8;
     color: #bbd2fd;
+
+
+
 }
 
 @keyframes mymove {
