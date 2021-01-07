@@ -5,11 +5,13 @@ import About from './views/About';
 import Testimonials from './views/Testimonials';
 import Contact from './views/Contact';
 import Pastel from './views/Pastel';
-import GalleryView from './views/Gallery';
+// import GalleryView from './views/Gallery';
+import Gallery from './views/Gallery';
 import Schedule2 from './views/Schedule2';
 import PageNotFound from './views/PageNotFound'
-import GalleryDetails from './components/gallery/GalleryDetails';
 // import GalleryDetails from './components/gallery/GalleryDetails';
+// import GalleryDetails from './components/gallery/GalleryDetails';
+// import 'react-image-lightbox/style.css';
 
 
 const App = () => {
@@ -31,12 +33,16 @@ const App = () => {
 				<Route exact path="/contact">
 					<Contact />
 				</Route>
-				<Route exact path="/gallery/:id">
+				{/* <Route exact path="/gallery/:id">
 					<GalleryDetails />
-				</Route>
+				</Route> */}
+
+				{/* <Route exact path="/gallery">
+					<GalleryView />
+				</Route> */}
 
 				<Route exact path="/gallery">
-					<GalleryView />
+					<Gallery />
 				</Route>
 
 				<Route exact path="/schedule2">
