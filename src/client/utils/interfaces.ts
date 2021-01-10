@@ -5,26 +5,26 @@ export interface ITestimonial {
     description?: string,
 }
 
-export interface IPhoto {
-    src?: string;
-    width?: number;
-    height?: number;
-}
+// export interface IPhoto {
+//     src?: string;
+//     width?: number;
+//     height?: number;
+// }
 
-export interface IGallery {
-    gallery:
-        {
-            src?: string;
-            width?: number;
-            height?: number;
-        }
-    id?: number;
-    name?: string;
-    photos?: [
-        {
-            src?: string;
-            width?: number;
-            height?: number;
-        }
-    ]; 
-}
+// export interface IGallery {
+//     gallery:
+//         {
+//             src?: string;
+//             width?: number;
+//             height?: number;
+//         }
+//     id?: number;
+//     name?: string;
+//     photos?: [
+//         {
+//             src?: string;
+//             width?: number;
+//             height?: number;
+//         }
+//     ]; 
+// }

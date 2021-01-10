@@ -1,32 +1,54 @@
 // import React, { useState, useCallback } from "react";
 // import { Link, NavLink } from 'react-router-dom';
-// import Gallery from "react-photo-gallery";
-// import Carousel, { Modal, ModalGateway } from "react-images";
 // import styled from "styled-components";
 // import GoogleFontLoader from "react-google-font-loader";
 // import NavBar from '../navigation/NavComponent';
 // // import { IGallery } from '../../utils/interfaces';
 // import { useParams } from 'react-router-dom'
 // import { galleries } from "../../utils/galleris";
-
-// // import Pastel from '../../views/Pastel';
 // import PageNotFound from "../../views/PageNotFound";
+// import Lightbox from "react-image-lightbox";
 
 // const GalleryDetails: React.FC<GalleryDetailsProps> = () => {
+
+
 //     const { id } = useParams<any>()
 
 //     const [galleryId, setGalleryId] = useState<any>(id)
 //     const [currentImage, setCurrentImage] = useState<any>(0);
 //     const [viewerIsOpen, setViewerIsOpen] = useState<any>(false);
-//     const openLightbox = React.useCallback<any>((event: any, { photo, index }: any) => {
-//         setCurrentImage(index);
-//         setViewerIsOpen(true);
-//     }, []);
 
-//     const closeLightbox = () => {
-//         setCurrentImage(0);
-//         setViewerIsOpen(false);
-//     };
+
+
+//     // const [photoIndex, setPhotoIndex] = useState(0);
+//     // const [isOpen, setIsOpen] = useState(false);
+
+
+//     const handleLightbox = () => {
+//         setViewerIsOpen(!viewerIsOpen)
+
+//     }
+
+//     // const openLightbox = React.useCallback<any>((event: any, { photo, index }: any) => {
+//     //     setCurrentImage(index);
+//     //     setViewerIsOpen(true);
+//     // }, []);
+
+//     // const closeLightbox = () => {
+//     //     setCurrentImage(0);
+//     //     setViewerIsOpen(false);
+//     // };
+
+
+//     const handlePreview = () => {
+//         setCurrentImage((currentImage + galleries.length - 1) % galleries.length)
+//     }
+
+//     const handleNext = () => {
+//         setCurrentImage((currentImage + 1) % galleries.length)
+//     }
+
+
 //     if (galleryId > galleries.length || isNaN(galleryId)) {
 //         return (
 //             <>
@@ -52,42 +74,46 @@
 //                         subsets={['cyrillic-ext', 'greek']}
 //                     />
 //                     <StyledMain className="container">
-//                         <div className="row d-flex justify-content-center align-items-center">
+//                         {/* <div className="row d-flex justify-content-center align-items-center">
 //                             <StyledTitle className="my-5 text-muted">{galleries[galleryId].name}</StyledTitle>
+//                         </div> */}
+
+//                         {/*after user clicks on image card on Gallery.tsx, map through images and display images */}
+
+//                         {/* <div className="row justify-content-center">
+//                           {galleries[`${galleryId}`].photos.map<any, any[]>((gallery: any) => ({
+//                             ...gallery,
+//                         }))}
+
+//                         </div> */}
+
+//                         {/*once images display, click single image to open light box. */}
+//                         currentIndex={currentImage} 
+                        
+//                         {galleries[galleryId].photos} onClick={handleLightbox}
+
+//                         <div>
+
+                    
+//                         {viewerIsOpen && (
+//                             <Lightbox
+//                                 mainSrc={galleries[currentImage]}
+//                                 nextSrc={galleries[(currentImage + 1) % galleries.length]}
+//                                 prevSrc={galleries[(currentImage + galleries.length - 1) % galleries.length]}
+
+//                                 onCloseRequest={handleLightbox}
+
+
+//                                 onMovePrevRequest={handlePreview}
+
+//                                 onMoveNextRequest={handleNext}
+
+//                             />
+//                         )}
 //                         </div>
 
 
-//                         <Gallery photos={galleries[galleryId].photos} onClick={openLightbox} />
-//                         <ModalGateway>
 
-//                             {viewerIsOpen ? (
-
-
-//                                 <Modal onClose={closeLightbox} >
-
-                                 
-//                                         <Carousel
-
-
-//                                             currentIndex={currentImage}
-//                                             views={galleries[`${galleryId}`].photos.map<any, any[]>((gallery: any) => ({
-//                                                 ...gallery,
-//                                             }))}
-
-
-//                                         />
-                                  
-
-
-
-//                                 </Modal>
-
-
-
-
-//                             ) : null}
-
-//                         </ModalGateway>
 
 
 //                     </StyledMain>
@@ -134,7 +160,7 @@
 
 
 
- 
+
 
 
 

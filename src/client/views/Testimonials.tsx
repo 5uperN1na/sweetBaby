@@ -81,7 +81,7 @@ const Layout = styled.div`
 `;
 
 const StyledMain = styled.main`
-    margin-top: 9.375rem;
+    margin-top: 5.25rem;
 
     @media (max-width: 812px) and (orientation: landscape) {
         margin-top: 4.375rem;
@@ -98,39 +98,39 @@ const Background = styled.div`
     width: 100%;
  
     @media screen and (max-width: 280px) {
-        height: 50%;
+        height: 42%;
     }
     
     
     @media screen and (min-width: 281px) and (max-width: 320px) {
-        height: 60%;
+        height: 48%;
     }
     
     
     @media screen and (min-width: 321px) and (max-width: 360px) {
-        height: 52%;
+        height: 43%;
     }
     
     @media screen and (min-width: 375px) and (max-height: 812px) {
-        height: 43%;
+        height: 34%;
     }
 
     @media screen and (min-width: 375px) and (max-height: 667px) {
-        height: 52%;
+        height: 42%;
     }
 
     @media screen and (min-width: 411px) and (max-height: 823px) {
-        height: 42%;
+        height: 33%;
     }
 
 
     @media screen and (min-width: 411px) and (max-height: 731px) {
-        height: 48%;
+        height: 38%;
     }
 
 
     @media screen and (min-width: 414px) and (max-width: 539px) {
-        height: 46%;
+        height: 38%;
     }
     
     @media screen and (min-width: 549px) and (max-width: 767px) {
@@ -138,20 +138,22 @@ const Background = styled.div`
     }
 
     @media screen and (min-width: 768px) and (max-width: 839px) {
-        height: 34%;
+        height: 27%;
     }
 
     @media screen and (min-width: 840px) and (max-height: 570px) {
         height: 58%;
     }
 
-    @media screen and (min-width: 1024px) and (max-width: 1366px) {
-        height: 25%;
+    @media screen and (min-width: 1024px) and (max-height: 1366px) {
+        height: 20%;
     }
 
-    @media screen and (min-width: 1366px) and (max-width: 1920px) {
-        height: 51%;
+    @media screen and (min-width: 1025px) and (max-width: 1920px) {
+        height: 42%;
     }
+
+   
     
     
 

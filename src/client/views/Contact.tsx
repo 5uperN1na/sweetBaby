@@ -42,7 +42,7 @@ const StyledTitle = styled.h1`
 
     @media (max-width: 375px) {
         position: absolute;
-        top: 25%;
+        top: 15%;
     }
 
     @media (max-width: 812px) and (orientation: landscape) {
@@ -84,7 +84,7 @@ const CardContainer = styled.section`
 `;
 
 const StyledMain = styled.main`
-    margin-top: 9.375rem;
+    margin-top: 9rem;
 
     @media (max-width: 812px) and (orientation: landscape) {
         margin-top: 4.375rem;
