@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { IGallery } from '../../utils/interfaces';
+// import { IGallery } from '../../utils/interfaces';
 import { Link } from 'react-router-dom';
 import { galleries } from '../../utils/galleris';
 import styled from 'styled-components';
@@ -141,7 +141,7 @@ const StyledCard = styled.div`
 
 
 type gallery = {
-    photos?: string;
+    photos?: string[];
     width?: number;
     height?: number;
     id?: number;
