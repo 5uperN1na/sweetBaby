@@ -1,77 +1,81 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import NavBar from '../components/navigation/NavComponent';
-import GoogleFontLoader from 'react-google-font-loader';
-import CraftsCarousel from '../components/gallery/CraftsCarousel';
-import InfantsCarousel from '../components/gallery/InfantsCarousel';
-
-const Gallery: React.FC<IGalleryProps> = (props) => {
-
-    return (
-        <Background>
-            <Layout>
-                <NavBar />
-                <StyledMain className="container">
-                    <GoogleFontLoader
-                        fonts={[
-                            {
-                                font: 'Homemade Apple',
-                                weights: [400, '400i'],
-                            },
-                            {
-                                font: 'Beth Ellen',
-                                weights: [400, '400i'],
-                            },
-                        ]}
-                        subsets={['cyrillic-ext', 'greek']}
-                    />
-                    <div className="d-flex justify-content-center align-items-center">
-                        <div className="testimonial-text mb-3 mt-5 text-muted">Gallery</div>
-                    </div>
-
-                    
-                        <CraftsCarousel />
-                        <InfantsCarousel />
-                  
-                    
-                </StyledMain>
-            </Layout>
-        </Background>
-    )
-}
-
+import React, { useState, useCallback } from "react";
+// import { IPhoto } from '../utils/interfaces';
+import styled from "styled-components";
+import GoogleFontLoader from "react-google-font-loader";
+import NavBar from "../components/navigation/NavComponent";
+import GalleryCard from "../components/gallery/GalleryCard";
+import { galleries } from '../utils/galleris';
  
 
-
-
-const Layout = styled.div`
-
-.testimonial-text {
-    font-family: 'Beth Ellen', sans-serif;
-    font-size: 40px;
+const Gallery: React.FC<IGalleryProps> = () => {
+    return (
+        <div>
+            <Background>
+               
+            
+                <NavBar   />
+               
+                <GoogleFontLoader
+                    fonts={[
+                        {
+                            font: 'Homemade Apple',
+                            weights: [400, '400i'],
+                        },
+                        {
+                            font: 'Beth Ellen',
+                            weights: [400, '400i'],
+                        },
+                    ]}
+                    subsets={['cyrillic-ext', 'greek']}
+                />
+                <StyledMain className="container">
+                    <div className="row d-flex justify-content-center align-items-center">
+                        <StyledTitle className="my-3 text-muted">Gallery</StyledTitle>
+                    </div>
+                    <section className="row justify-content-center mt-5">
+                        {/* <div className="col-10"> */}
+                            {/* {galleries.map(gallery => gallery.photos.map(photo => (
+                                <GalleryCard key={`photo-${photo.src}`} photo={photo} gallery={gallery}/>
+                            )))} */}
+                            {galleries.map((gallery, index) => (
+                                <GalleryCard key={`photo-${gallery.name}`} gallery={gallery} index={index} />
+                            ))}
+                        {/* </div> */}
+                    </section>
+                </StyledMain>
+            
+            </Background>
+        </div >
+    );
 }
+
+
+
+
+const StyledTitle = styled.h1`
+    font-family: 'Beth Ellen', sans-serif;
+    font-size: 2.5rem;
 `;
 
 const StyledMain = styled.main`
-    margin-top: 9.375rem;
+    margin-top: 7.25rem;
 
     @media (max-width: 812px) and (orientation: landscape) {
-        margin-top: 4.375rem;
+            margin-top: 4.375rem;
     }
+
 `;
 
 const Background = styled.div`
-    background-color: #d7eecc;
+    background-color: #ffbfc5;
     height: 50%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
- 
-
-
 `;
+
 
 export interface IGalleryProps { }
 
