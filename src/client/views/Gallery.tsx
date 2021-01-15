@@ -28,9 +28,9 @@ const Gallery: React.FC<IGalleryProps> = () => {
                     ]}
                     subsets={['cyrillic-ext', 'greek']}
                 />
-                <StyledMain className="container">
-                    <div className="row d-flex justify-content-center align-items-center">
-                        <StyledTitle className="my-3 text-muted">Gallery</StyledTitle>
+                 <StyledMain className="container">
+                    <div className="d-flex justify-content-center align-items-center">
+                        <StyledTitle className="mb-3 mt-5 text-muted">Gallery</StyledTitle>
                     </div>
                     <section className="row justify-content-center mt-5">
                         {/* <div className="col-10"> */}
@@ -55,10 +55,14 @@ const Gallery: React.FC<IGalleryProps> = () => {
 const StyledTitle = styled.h1`
     font-family: 'Beth Ellen', sans-serif;
     font-size: 2.5rem;
+
+    @media (max-width: 812px) and (orientation: landscape) {
+        display: none;
+    }
 `;
 
 const StyledMain = styled.main`
-    margin-top: 7.25rem;
+    margin-top: 5.40rem;
 
     @media (max-width: 812px) and (orientation: landscape) {
             margin-top: 4.375rem;

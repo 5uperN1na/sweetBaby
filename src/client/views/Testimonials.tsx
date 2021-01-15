@@ -42,46 +42,78 @@ const Testimonials: React.FC<ITestimonialsProps> = (props) => {
 
     return (
         <Background>
-            <Layout>
+         
                 <NavBar />
+
+                <GoogleFontLoader
+                    fonts={[
+                        {
+                            font: 'Homemade Apple',
+                            weights: [400, '400i'],
+                        },
+                        {
+                            font: 'Beth Ellen',
+                            weights: [400, '400i'],
+                        },
+                    ]}
+                    subsets={['cyrillic-ext', 'greek']}
+                />
+
                 <StyledMain className="container">
-                    <GoogleFontLoader
-                        fonts={[
-                            {
-                                font: 'Homemade Apple',
-                                weights: [400, '400i'],
-                            },
-                            {
-                                font: 'Beth Ellen',
-                                weights: [400, '400i'],
-                            },
-                        ]}
-                        subsets={['cyrillic-ext', 'greek']}
-                    />
                     <div className="d-flex justify-content-center align-items-center">
-                        <div className="testimonial-text mb-3 mt-5 text-muted">Testimonials</div>
+                        <StyledTitle className="mb-3 mt-5 text-muted">Testimonials</StyledTitle>
                     </div>
+
                     <div className="row justify-content-center">
                         {TestimonialsArray.map((testimonial, index) => (
                             <TestimonialsComp key={index} testimonial={testimonial} />
                         ))}
                     </div>
                 </StyledMain>
-            </Layout>
+           
         </Background>
     )
 }
 
-const Layout = styled.div`
-
-.testimonial-text {
+const StyledTitle = styled.h1`
     font-family: 'Beth Ellen', sans-serif;
     font-size: 40px;
-}
+    // position: absolute;
+  
+
+    @media (max-width: 812px) and (orientation: landscape) {
+        display: none;
+    }
+
+    @media (max-width: 320px) {
+        font-size: 33px;
+        top: 18%;
+         
+        
+    }
+
 `;
 
+
+
+
+
+// const Layout = styled.div`
+
+// .testimonial-text {
+//     font-family: 'Beth Ellen', sans-serif;
+//     font-size: 40px;
+
+//     @media (max-width: 812px) and (orientation: landscape) {
+//         display: none;
+//     }
+// }
+
+
+// `;
+
 const StyledMain = styled.main`
-    margin-top: 5.25rem;
+    margin-top: 5.45rem;
 
     @media (max-width: 812px) and (orientation: landscape) {
         margin-top: 4.375rem;

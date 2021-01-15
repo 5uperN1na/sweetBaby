@@ -9,20 +9,21 @@ const Schedule2: React.FC<ISchedule2Props> = (props) => {
         <Background>
             <Layout>
                 <NavBar />
+
+                <GoogleFontLoader
+                    fonts={[
+                        {
+                            font: 'Homemade Apple',
+                            weights: [400, '400i'],
+                        },
+                        {
+                            font: 'Beth Ellen',
+                            weights: [400, '400i'],
+                        },
+                    ]}
+                    subsets={['cyrillic-ext', 'greek']}
+                />
                 <StyledMain className="container">
-                    <GoogleFontLoader
-                        fonts={[
-                            {
-                                font: 'Homemade Apple',
-                                weights: [400, '400i'],
-                            },
-                            {
-                                font: 'Beth Ellen',
-                                weights: [400, '400i'],
-                            },
-                        ]}
-                        subsets={['cyrillic-ext', 'greek']}
-                    />
 
                     <div className="d-flex justify-content-center align-items-center">
                         <div className="testimonial-text mb-3 mt-5 text-muted">Schedule</div>
@@ -87,7 +88,7 @@ const Schedule2: React.FC<ISchedule2Props> = (props) => {
                                     <span className="text"><strong>11-11:45</strong></span>
                                     <span className="text">Crafts</span>
                                 </div>
-                             
+
 
                                 <div className="blueline"></div>
                             </div>
@@ -107,7 +108,7 @@ const Schedule2: React.FC<ISchedule2Props> = (props) => {
                                 <div className="card_row">
                                     <span className="text"><strong>11:45-12    </strong></span>
                                     <span className="text">Potty Break</span>
-                                
+
                                 </div>
 
                                 <div className="blueline"></div>
@@ -179,6 +180,10 @@ const Layout = styled.div`
 .testimonial-text {
     font-family: 'Beth Ellen', sans-serif;
     font-size: 40px;
+
+    @media (max-width: 812px) and (orientation: landscape) {
+        display: none;
+    }
 }
 
 span  {
@@ -257,7 +262,7 @@ span  {
 `;
 
 const StyledMain = styled.main`
-    margin-top: 9.375rem;
+    margin-top: 4.70rem;
 
     @media (max-width: 812px) and (orientation: landscape) {
         margin-top: 4.375rem;
@@ -266,7 +271,7 @@ const StyledMain = styled.main`
 
 const Background = styled.div`
     background-color: #b2d0f1;
-    height: 55%;
+    height: 50%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

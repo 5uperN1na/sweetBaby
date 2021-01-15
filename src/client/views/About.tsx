@@ -11,7 +11,6 @@ const About = () => {
             
             <NavBar />
           
-            <main className="container-fluid">
                 <GoogleFontLoader
                     fonts={[
                         {
@@ -25,9 +24,10 @@ const About = () => {
                     ]}
                     subsets={['cyrillic-ext', 'greek']}
                 />
-                <header className="d-flex justify-content-center">
-                    <StyledTitle className="m-5 text-muted">About Us</StyledTitle>
-                </header>
+                  <StyledMain className="container">
+                  <div className="d-flex justify-content-center align-items-center">
+                    <StyledTitle className="text-muted">About Us</StyledTitle>
+                </div>
              
                 <CenterDiv>
             
@@ -82,7 +82,7 @@ const About = () => {
                     </div>
                   
                 </TextContainer>
-            </main>
+            </StyledMain>
 
            
             
@@ -94,6 +94,15 @@ const About = () => {
 
    
 }
+
+const StyledMain = styled.main`
+    margin-top: 9.55rem;
+
+    @media (max-width: 812px) and (orientation: landscape) {
+        margin-top: 4.375rem;
+    }
+`;
+
 
 const Background = styled.div`
     background-color: #b2d0f1;
@@ -118,7 +127,7 @@ const StyledTitle = styled.h1`
     font-family: 'Beth Ellen', sans-serif;
     font-size: 40px;
     position: absolute;
-    top: 15%;
+     
 
     @media (max-width: 812px) and (orientation: landscape) {
         display: none;
@@ -126,7 +135,7 @@ const StyledTitle = styled.h1`
 
     @media (max-width: 320px) {
         font-size: 33px;
-        top: 18%;
+        top: 25%;
          
         
     }
