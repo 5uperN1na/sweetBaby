@@ -10,12 +10,12 @@ import CovidModal2 from '../components/covid/CovidModal2';
 const Home: React.FC<IHomeProps> = () => {
 
     return (
-    
+
         <Background>
-        
+
             <NavBar />
             <CovidModal2 />
-           
+
             <HeroDiv className="d-flex justify-content-center">
 
                 <StyledImg
@@ -33,7 +33,6 @@ const Home: React.FC<IHomeProps> = () => {
 
     );
 }
-
 const Background = styled.div`
     background-color: #ffe98e;
     height: 50%;
@@ -42,11 +41,9 @@ const Background = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-
-    @media (max-width: 812px) and (orientation: landscape) {
+    @media (max-width: 991px) and (orientation: landscape) {
         height: 60%;
     }
-
      
 `;
 
@@ -55,11 +52,13 @@ const StyledImg = styled.img`
     max-width: 100%;
     max-height: 20.31rem;
     overflow: hidden;
-
-    @media (max-width: 812px) and (orientation: landscape) {
+    @media (max-width: 991px) and (orientation: landscape) {
         width: 20rem;
     }
 
+    @media (max-width: 653px) and (orientation: landscape) {
+        width: 10rem;
+    }
     
 `;
 
@@ -70,13 +69,11 @@ const HeroDiv = styled.section`
     right: 20%;
     max-height: 20.31rem;
     transform: translateY(-50%);
-
     @media (max-width: 414px) {
         left: 5%;
         right: 5%;
     }
-
-    @media (max-width: 812px) and (orientation: landscape) {
+    @media (max-width: 991px) and (orientation: landscape) {
         top: 60%;
     }
 `;
@@ -85,16 +82,11 @@ const BottomDiv = styled.section`
     position: absolute;
     top: 75%;
     width: 100%;
-
     @media (max-width: 812px) and (orientation: landscape) {
         top: 100%;
     }
-
     
 `;
-
-
-
 
 
 

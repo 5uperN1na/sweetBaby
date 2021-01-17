@@ -150,7 +150,7 @@ const Layout = styled.div`
  
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 412px) {
   .modal-content{
     font-size: 12px;
   

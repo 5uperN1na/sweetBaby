@@ -9,6 +9,7 @@ const Contact: React.FC<IContactProps> = () => {
         <>
             <Background>
                 <NavBar />
+
                 <GoogleFontLoader
                     fonts={[
                         {
@@ -22,9 +23,9 @@ const Contact: React.FC<IContactProps> = () => {
                     ]}
                     subsets={['cyrillic-ext', 'greek']}
                 />
-                <StyledMain className="container-fluid">
-                    <div className="row d-flex justify-content-center">
-                        <StyledTitle className="text-muted">Contact</StyledTitle>
+                <StyledMain className="container">
+                    <div className="d-flex justify-content-center align-items-center">
+                        <StyledTitle className="mb-3 mt-5 text-muted">Contact</StyledTitle>
                     </div>
                     <CardContainer className="mx-auto">
                         <ContactCards />
@@ -36,24 +37,52 @@ const Contact: React.FC<IContactProps> = () => {
 }
 
 
+// const StyledTitle = styled.h1`
+//     font-family: 'Beth Ellen', sans-serif;
+//     font-size: 2.5rem;
+
+//     @media (max-width: 375px) {
+//         position: absolute;
+//         top: 15%;
+//     }
+
+//     @media (max-width: 812px) and (orientation: landscape) {
+//         display: none;
+//     }
+
+//     @media (min-width: 1024px) {
+//         position: absolute;
+//         top: 25%;
+//     } 
+// `;
+
+const StyledMain = styled.main`
+    margin-top: 5.70rem;   
+
+    @media (max-width: 812px) and (orientation: landscape) {
+        margin-top: 4.375rem;
+    }
+`;
+
 const StyledTitle = styled.h1`
     font-family: 'Beth Ellen', sans-serif;
-    font-size: 2.5rem;
-
-    @media (max-width: 375px) {
-        position: absolute;
-        top: 15%;
-    }
+    font-size: 40px;
+    // position: absolute;
+  
 
     @media (max-width: 812px) and (orientation: landscape) {
         display: none;
     }
 
-    @media (min-width: 1024px) {
-        position: absolute;
-        top: 25%;
-    } 
+    @media (max-width: 320px) {
+        font-size: 33px;
+        top: 18%;
+         
+        
+    }
+
 `;
+
 
 const CardContainer = styled.section`
     position: absolute;
@@ -83,15 +112,8 @@ const CardContainer = styled.section`
     } 
 `;
 
-const StyledMain = styled.main`
-    margin-top: 9rem;
 
-    @media (max-width: 812px) and (orientation: landscape) {
-        margin-top: 4.375rem;
-    }
-`;
-
-const Background = styled.div `
+const Background = styled.div`
     background-color: #f5dcdb;
     height: 50%;
 
@@ -100,6 +122,6 @@ const Background = styled.div `
     // }
 `;
 
-export interface IContactProps {}
+export interface IContactProps { }
 
 export default Contact;
