@@ -129,9 +129,9 @@ const StyledTitle = styled.h1`
     position: absolute;
      
 
-    @media (max-width: 812px) and (orientation: landscape) {
-        display: none;
-    }
+    // @media (max-width: 812px) and (orientation: landscape) {
+    //     display: none;
+    // }
 
     @media (max-width: 320px) {
         font-size: 33px;
@@ -253,12 +253,19 @@ const StyledImg = styled.img`
 const TextContainer = styled.section`
     position: absolute;
     top: 70%;
+    padding-right: 8rem;
+    // padding-right: 15px;
 
-    @media (min-width: 667px) and (max-width: 812px) and (orientation: landscape) {
-        top: 95%;
+    @media (max-width: 1024px)  {
+        top: 75%;
+        padding-right: 1rem;
     }
 
-    padding-right: 18px;
+
+    
+    
+
+
 `;
 
 export default About;
