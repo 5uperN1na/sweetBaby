@@ -42,7 +42,8 @@ const ContactCards: React.FC<IContactCardProps> = () => {
                         </div>
                         <div className="card-body">
                             <div className="card-text text-center">
-                                <StyledLink className="text-body landscape-mobile-text" href="mailto:test@yoursite.com?subject=New%20Inquiry" target="_blank" rel="noopener noreferrer">test@sweetbaby.com</StyledLink>
+                               {/* <StyledLink className="text-body landscape-mobile-text" href="mailto:test@yoursite.com?subject=New%20Inquiry" target="_blank" rel="noopener noreferrer">test@sweetbaby.com</StyledLink> */}
+                               <StyledLink className="text-body landscape-mobile-text" href="mailto:gcgg1805@gmail.com?subject=New%20Inquiry" target="_blank" rel="noopener noreferrer">Email</StyledLink>
                             </div>
                         </div>
                     </div>
